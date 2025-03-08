@@ -77,7 +77,7 @@
     "14": {
         "inputs": {
             "pixels": [
-                "16",
+                "34",
                 0
             ],
             "vae": [
@@ -148,7 +148,7 @@
                 0
             ],
             "image": [
-                "16",
+                "34",
                 0
             ]
         },
@@ -256,13 +256,31 @@
             "ckpt_name": "depth_anything_vitl14.pth",
             "resolution": 512,
             "image": [
-                "16",
+                "34",
                 0
             ]
         },
         "class_type": "DepthAnythingPreprocessor",
         "_meta": {
             "title": "Depth Anything"
+        }
+    },
+    "34": {
+        "inputs": {
+            "width": 1024,
+            "height": 1024,
+            "interpolation": "nearest",
+            "method": "keep proportion",
+            "condition": "always",
+            "multiple_of": 0,
+            "image": [
+                "16",
+                0
+            ]
+        },
+        "class_type": "ImageResize+",
+        "_meta": {
+            "title": "🔧 Image Resize"
         }
     }
 }
