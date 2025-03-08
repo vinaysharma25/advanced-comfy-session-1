@@ -23,7 +23,7 @@ workflows:
   - id: pv83l25txlq
     name: product_photography_api.json
     file: inpainting_and_outpainting/product_photography_api.json
-    version: 0
+    version: 1
     description: ''
     inputs: []
     outputs: []
@@ -40,4 +40,4 @@ normal_workflows:
   - id: bachzewemb
     name: product_photography.json
     file: inpainting_and_outpainting/product_photography.json
-    version: 0
+    version: 1
