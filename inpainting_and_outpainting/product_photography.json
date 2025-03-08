@@ -1,6 +1,6 @@
 {
-    "last_node_id": 33,
-    "last_link_id": 54,
+    "last_node_id": 34,
+    "last_link_id": 58,
     "nodes": [
         {
             "id": 20,
@@ -96,7 +96,7 @@
                 {
                     "name": "image",
                     "type": "IMAGE",
-                    "link": 25
+                    "link": 56
                 }
             ],
             "outputs": [
@@ -139,7 +139,7 @@
                 246
             ],
             "flags": {},
-            "order": 10,
+            "order": 11,
             "mode": 0,
             "inputs": [
                 {
@@ -168,7 +168,7 @@
                 26
             ],
             "flags": {},
-            "order": 11,
+            "order": 12,
             "mode": 0,
             "inputs": [
                 {
@@ -206,7 +206,7 @@
                 246
             ],
             "flags": {},
-            "order": 13,
+            "order": 14,
             "mode": 0,
             "inputs": [
                 {
@@ -241,7 +241,7 @@
                 {
                     "name": "image",
                     "type": "IMAGE",
-                    "link": 49
+                    "link": 57
                 }
             ],
             "outputs": [
@@ -311,7 +311,7 @@
                 186
             ],
             "flags": {},
-            "order": 12,
+            "order": 13,
             "mode": 0,
             "inputs": [
                 {
@@ -435,7 +435,7 @@
                 46
             ],
             "flags": {},
-            "order": 16,
+            "order": 17,
             "mode": 0,
             "inputs": [
                 {
@@ -478,7 +478,7 @@
                 270
             ],
             "flags": {},
-            "order": 17,
+            "order": 18,
             "mode": 0,
             "inputs": [
                 {
@@ -497,49 +497,6 @@
             ]
         },
         {
-            "id": 16,
-            "type": "LoadImage",
-            "pos": [
-                21.252822875976562,
-                309.8453063964844
-            ],
-            "size": [
-                315,
-                314
-            ],
-            "flags": {},
-            "order": 4,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "links": [
-                        19,
-                        25,
-                        49
-                    ],
-                    "slot_index": 0
-                },
-                {
-                    "name": "MASK",
-                    "type": "MASK",
-                    "links": [],
-                    "slot_index": 1
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "LoadImage"
-            },
-            "widgets_values": [
-                "delsey-chatelet-air-2.0-00167681015-01_1800x1800.webp",
-                "image"
-            ]
-        },
-        {
             "id": 11,
             "type": "KSampler",
             "pos": [
@@ -551,7 +508,7 @@
                 262
             ],
             "flags": {},
-            "order": 15,
+            "order": 16,
             "mode": 0,
             "inputs": [
                 {
@@ -644,15 +601,15 @@
             "id": 13,
             "type": "SetLatentNoiseMask",
             "pos": [
-                559.0072631835938,
-                910.7178955078125
+                935.7691040039062,
+                926.3934326171875
             ],
             "size": [
                 264.5999755859375,
                 46
             ],
             "flags": {},
-            "order": 14,
+            "order": 15,
             "mode": 0,
             "inputs": [
                 {
@@ -687,21 +644,21 @@
             "id": 14,
             "type": "VAEEncode",
             "pos": [
-                557.0813598632812,
-                800.6343383789062
+                933.8432006835938,
+                816.3098754882812
             ],
             "size": [
                 210,
                 46
             ],
             "flags": {},
-            "order": 7,
+            "order": 10,
             "mode": 0,
             "inputs": [
                 {
                     "name": "pixels",
                     "type": "IMAGE",
-                    "link": 19
+                    "link": 58
                 },
                 {
                     "name": "vae",
@@ -765,6 +722,104 @@
             "widgets_values": [
                 "luggage, kept on a desk, in a forest "
             ]
+        },
+        {
+            "id": 16,
+            "type": "LoadImage",
+            "pos": [
+                12.277090072631836,
+                801.5881958007812
+            ],
+            "size": [
+                315,
+                314
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        55
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": [],
+                    "slot_index": 1
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "delsey-chatelet-air-2.0-00167681015-01_1800x1800.webp",
+                "image"
+            ]
+        },
+        {
+            "id": 34,
+            "type": "ImageResize+",
+            "pos": [
+                398.168701171875,
+                813.2986450195312
+            ],
+            "size": [
+                315,
+                218
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 55
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        56,
+                        57,
+                        58
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "width",
+                    "type": "INT",
+                    "links": null
+                },
+                {
+                    "name": "height",
+                    "type": "INT",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "aux_id": "cubiq/ComfyUI_essentials",
+                "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+                "Node name for S&R": "ImageResize+"
+            },
+            "widgets_values": [
+                1024,
+                1024,
+                "nearest",
+                "keep proportion",
+                "always",
+                0
+            ]
         }
     ],
     "links": [
@@ -817,14 +872,6 @@
             "LATENT"
         ],
         [
-            19,
-            16,
-            0,
-            14,
-            0,
-            "IMAGE"
-        ],
-        [
             20,
             15,
             2,
@@ -863,14 +910,6 @@
             19,
             1,
             "GROUNDING_DINO_MODEL"
-        ],
-        [
-            25,
-            16,
-            0,
-            19,
-            2,
-            "IMAGE"
         ],
         [
             26,
@@ -929,14 +968,6 @@
             "MASK"
         ],
         [
-            49,
-            16,
-            0,
-            33,
-            0,
-            "IMAGE"
-        ],
-        [
             50,
             33,
             0,
@@ -967,6 +998,38 @@
             11,
             2,
             "CONDITIONING"
+        ],
+        [
+            55,
+            16,
+            0,
+            34,
+            0,
+            "IMAGE"
+        ],
+        [
+            56,
+            34,
+            0,
+            19,
+            2,
+            "IMAGE"
+        ],
+        [
+            57,
+            34,
+            0,
+            33,
+            0,
+            "IMAGE"
+        ],
+        [
+            58,
+            34,
+            0,
+            14,
+            0,
+            "IMAGE"
         ]
     ],
     "groups": [
@@ -1013,10 +1076,23 @@
             "id": 4,
             "title": "Inpainting",
             "bounding": [
-                448.55938720703125,
-                706.0339965820312,
+                825.3212890625,
+                721.7095336914062,
                 456.6602478027344,
                 308.4557800292969
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+        },
+        {
+            "id": 5,
+            "title": "Inputs",
+            "bounding": [
+                -0.21193164587020874,
+                705.8800659179688,
+                795.2796630859375,
+                451.4238586425781
             ],
             "color": "#3f789e",
             "font_size": 24,
@@ -1026,10 +1102,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.7513148009015777,
+            "scale": 0.5644739300537773,
             "offset": [
-                136.71824642165404,
-                505.5396034245631
+                540.4817250674971,
+                194.58744407902964
             ]
         }
     },
