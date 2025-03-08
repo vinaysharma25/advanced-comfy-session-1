@@ -44,6 +44,14 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
+  - id: 9sz31776699
+    name: controlnet_connection_api.json
+    file: basics/controlnet_connection_api.json
+    version: 0
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -64,4 +72,8 @@ normal_workflows:
   - id: 6765idkbpdn
     name: controlnet_preprocessors.json
     file: basics/controlnet_preprocessors.json
+    version: 0
+  - id: q21h5nk21po
+    name: controlnet_connection.json
+    file: basics/controlnet_connection.json
     version: 0
