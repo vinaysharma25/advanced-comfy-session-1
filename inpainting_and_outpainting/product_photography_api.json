@@ -187,35 +187,10 @@
             "title": "Preview Image"
         }
     },
-    "23": {
-        "inputs": {
-            "da_model": [
-                "24",
-                0
-            ],
-            "images": [
-                "16",
-                0
-            ]
-        },
-        "class_type": "DepthAnything_V2",
-        "_meta": {
-            "title": "Depth Anything V2"
-        }
-    },
-    "24": {
-        "inputs": {
-            "model": "depth_anything_v2_vitl_fp32.safetensors"
-        },
-        "class_type": "DownloadAndLoadDepthAnythingV2Model",
-        "_meta": {
-            "title": "DownloadAndLoadDepthAnythingV2Model"
-        }
-    },
     "25": {
         "inputs": {
             "images": [
-                "23",
+                "33",
                 0
             ]
         },
@@ -242,7 +217,7 @@
                 0
             ],
             "image": [
-                "23",
+                "33",
                 0
             ],
             "vae": [
@@ -309,6 +284,20 @@
         "class_type": "PreviewImage",
         "_meta": {
             "title": "Preview Image"
+        }
+    },
+    "33": {
+        "inputs": {
+            "ckpt_name": "depth_anything_vitl14.pth",
+            "resolution": 512,
+            "image": [
+                "16",
+                0
+            ]
+        },
+        "class_type": "DepthAnythingPreprocessor",
+        "_meta": {
+            "title": "Depth Anything"
         }
     }
 }
