@@ -3,147 +3,6 @@
     "last_link_id": 16,
     "nodes": [
         {
-            "id": 3,
-            "type": "KSampler",
-            "pos": [
-                863,
-                186
-            ],
-            "size": [
-                315,
-                262
-            ],
-            "flags": {},
-            "order": 8,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "model",
-                    "type": "MODEL",
-                    "link": 1
-                },
-                {
-                    "name": "positive",
-                    "type": "CONDITIONING",
-                    "link": 4
-                },
-                {
-                    "name": "negative",
-                    "type": "CONDITIONING",
-                    "link": 6
-                },
-                {
-                    "name": "latent_image",
-                    "type": "LATENT",
-                    "link": 16
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "LATENT",
-                    "type": "LATENT",
-                    "links": [
-                        7
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "KSampler"
-            },
-            "widgets_values": [
-                1005043984364030,
-                "randomize",
-                20,
-                8,
-                "euler",
-                "normal",
-                1
-            ]
-        },
-        {
-            "id": 11,
-            "type": "LoadImage",
-            "pos": [
-                214.02423095703125,
-                656.8136596679688
-            ],
-            "size": [
-                315,
-                314
-            ],
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "links": [
-                        10
-                    ],
-                    "slot_index": 0
-                },
-                {
-                    "name": "MASK",
-                    "type": "MASK",
-                    "links": null
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "LoadImage"
-            },
-            "widgets_values": [
-                "example.png",
-                "image"
-            ]
-        },
-        {
-            "id": 6,
-            "type": "CLIPTextEncode",
-            "pos": [
-                415,
-                186
-            ],
-            "size": [
-                422.84503173828125,
-                164.31304931640625
-            ],
-            "flags": {},
-            "order": 3,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "clip",
-                    "type": "CLIP",
-                    "link": 3
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "CONDITIONING",
-                    "type": "CONDITIONING",
-                    "links": [
-                        4
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "CLIPTextEncode"
-            },
-            "widgets_values": [
-                "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
-            ]
-        },
-        {
             "id": 7,
             "type": "CLIPTextEncode",
             "pos": [
@@ -155,7 +14,7 @@
                 180.6060791015625
             ],
             "flags": {},
-            "order": 4,
+            "order": 3,
             "mode": 0,
             "inputs": [
                 {
@@ -235,7 +94,7 @@
             ],
             "size": [
                 210,
-                58
+                270
             ],
             "flags": {},
             "order": 10,
@@ -257,34 +116,6 @@
             ]
         },
         {
-            "id": 12,
-            "type": "PreviewImage",
-            "pos": [
-                1047.593505859375,
-                653.2763671875
-            ],
-            "size": [
-                210,
-                246
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "images",
-                    "type": "IMAGE",
-                    "link": 11
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "PreviewImage"
-            }
-        },
-        {
             "id": 4,
             "type": "CheckpointLoaderSimple",
             "pos": [
@@ -296,7 +127,7 @@
                 98
             ],
             "flags": {},
-            "order": 1,
+            "order": 0,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -376,7 +207,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "SetLatentNoiseMask"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 13,
@@ -418,7 +250,109 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "VAEEncode"
-            }
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 3,
+            "type": "KSampler",
+            "pos": [
+                863,
+                186
+            ],
+            "size": [
+                315,
+                262
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 1
+                },
+                {
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "link": 4
+                },
+                {
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "link": 6
+                },
+                {
+                    "name": "latent_image",
+                    "type": "LATENT",
+                    "link": 16
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        7
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "KSampler"
+            },
+            "widgets_values": [
+                492305295044545,
+                "randomize",
+                20,
+                8,
+                "dpmpp_2m_sde",
+                "karras",
+                1
+            ]
+        },
+        {
+            "id": 11,
+            "type": "LoadImage",
+            "pos": [
+                214.02423095703125,
+                656.8136596679688
+            ],
+            "size": [
+                315,
+                314
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        10
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "ComfyUI_00018_.png",
+                "image"
+            ]
         },
         {
             "id": 10,
@@ -432,7 +366,7 @@
                 174
             ],
             "flags": {},
-            "order": 2,
+            "order": 4,
             "mode": 0,
             "inputs": [
                 {
@@ -467,11 +401,80 @@
             },
             "widgets_values": [
                 200,
-                0,
                 200,
-                0,
+                200,
+                200,
                 40
             ]
+        },
+        {
+            "id": 6,
+            "type": "CLIPTextEncode",
+            "pos": [
+                415,
+                186
+            ],
+            "size": [
+                422.84503173828125,
+                164.31304931640625
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 3
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        4
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "classy room with windows"
+            ]
+        },
+        {
+            "id": 12,
+            "type": "PreviewImage",
+            "pos": [
+                1022.9261474609375,
+                636.5799560546875
+            ],
+            "size": [
+                329.98773193359375,
+                303.3211364746094
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 11
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            },
+            "widgets_values": []
         }
     ],
     "links": [
@@ -600,10 +603,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 1.2100000000000002,
+            "scale": 0.6830134553650705,
             "offset": [
-                -117.75400690476518,
-                -245.22724462437048
+                191.20756188267472,
+                -30.12780748976987
             ]
         }
     },
