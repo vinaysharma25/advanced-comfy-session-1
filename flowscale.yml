@@ -36,6 +36,14 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
+  - id: xtthnc37xx
+    name: controlnet_preprocessors_api.json
+    file: basics/controlnet_preprocessors_api.json
+    version: 0
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -52,4 +60,8 @@ normal_workflows:
   - id: q3oer3g3ulq
     name: image_resizing.json
     file: basics/image_resizing.json
+    version: 0
+  - id: 6765idkbpdn
+    name: controlnet_preprocessors.json
+    file: basics/controlnet_preprocessors.json
     version: 0
