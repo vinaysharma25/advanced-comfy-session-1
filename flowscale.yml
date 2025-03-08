@@ -12,8 +12,20 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
+  - id: p9by8w497t
+    name: basic_outpainting_api.json
+    file: inpainting_and_outpainting/basic_outpainting_api.json
+    version: 0
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
     file: inpainting_and_outpainting/basic_inpainting.json
     version: .nan
+  - id: ou0raz0jdo
+    name: basic_outpainting.json
+    file: inpainting_and_outpainting/basic_outpainting.json
+    version: 0
