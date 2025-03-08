@@ -52,6 +52,14 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
+  - id: 61rifburtgy
+    name: segment_anything_api.json
+    file: basics/segment_anything_api.json
+    version: 0
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -76,4 +84,8 @@ normal_workflows:
   - id: q21h5nk21po
     name: controlnet_connection.json
     file: basics/controlnet_connection.json
+    version: 0
+  - id: flu0dkbhzzn
+    name: segment_anything.json
+    file: basics/segment_anything.json
     version: 0
