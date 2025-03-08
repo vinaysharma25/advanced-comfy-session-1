@@ -15,7 +15,7 @@ workflows:
   - id: p9by8w497t
     name: basic_outpainting_api.json
     file: inpainting_and_outpainting/basic_outpainting_api.json
-    version: 0
+    version: 1
     description: ''
     inputs: []
     outputs: []
@@ -28,4 +28,4 @@ normal_workflows:
   - id: ou0raz0jdo
     name: basic_outpainting.json
     file: inpainting_and_outpainting/basic_outpainting.json
-    version: 0
+    version: 1
