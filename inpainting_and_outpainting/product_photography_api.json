@@ -14,7 +14,7 @@
     },
     "11": {
         "inputs": {
-            "seed": 589157687023627,
+            "seed": 348357093790903,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -101,7 +101,7 @@
     },
     "16": {
         "inputs": {
-            "image": "delsey-chatelet-air-2.0-00167681015-01_1800x1800.webp",
+            "image": "image (5).webp",
             "upload": "image"
         },
         "class_type": "LoadImage",
@@ -111,7 +111,7 @@
     },
     "17": {
         "inputs": {
-            "text": "luggage, kept on a desk, in a forest ",
+            "text": "water bottle, kept on a desk, in a forest background",
             "clip": [
                 "15",
                 1
@@ -190,7 +190,7 @@
     "25": {
         "inputs": {
             "images": [
-                "33",
+                "35",
                 0
             ]
         },
@@ -217,7 +217,7 @@
                 0
             ],
             "image": [
-                "33",
+                "35",
                 0
             ],
             "vae": [
@@ -232,7 +232,7 @@
     },
     "27": {
         "inputs": {
-            "control_net_name": "control_v11f1p_sd15_depth_fp16.safetensors"
+            "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
         },
         "class_type": "ControlNetLoader",
         "_meta": {
@@ -251,20 +251,6 @@
             "title": "InvertMask (segment anything)"
         }
     },
-    "33": {
-        "inputs": {
-            "ckpt_name": "depth_anything_vitl14.pth",
-            "resolution": 512,
-            "image": [
-                "34",
-                0
-            ]
-        },
-        "class_type": "DepthAnythingPreprocessor",
-        "_meta": {
-            "title": "Depth Anything"
-        }
-    },
     "34": {
         "inputs": {
             "width": 1024,
@@ -281,6 +267,20 @@
         "class_type": "ImageResize+",
         "_meta": {
             "title": "🔧 Image Resize"
+        }
+    },
+    "35": {
+        "inputs": {
+            "coarse": "disable",
+            "resolution": 512,
+            "image": [
+                "34",
+                0
+            ]
+        },
+        "class_type": "LineArtPreprocessor",
+        "_meta": {
+            "title": "Realistic Lineart"
         }
     }
 }
