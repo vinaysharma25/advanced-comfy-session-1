@@ -47,7 +47,7 @@ workflows:
   - id: 9sz31776699
     name: controlnet_connection_api.json
     file: basics/controlnet_connection_api.json
-    version: 0
+    version: 1
     description: ''
     inputs: []
     outputs: []
@@ -84,7 +84,7 @@ normal_workflows:
   - id: q21h5nk21po
     name: controlnet_connection.json
     file: basics/controlnet_connection.json
-    version: 0
+    version: 1
   - id: flu0dkbhzzn
     name: segment_anything.json
     file: basics/segment_anything.json
