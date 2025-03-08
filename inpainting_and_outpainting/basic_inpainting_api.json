@@ -1,7 +1,7 @@
 {
     "3": {
         "inputs": {
-            "seed": 156680208700286,
+            "seed": 512407493877322,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -40,7 +40,7 @@
     },
     "6": {
         "inputs": {
-            "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+            "text": "toy car, on a street, facing camera",
             "clip": [
                 "4",
                 1
@@ -111,7 +111,7 @@
     },
     "11": {
         "inputs": {
-            "image": "flowscale_user_default_fal-img_00003_.png",
+            "image": "clipspace/clipspace-mask-96496.30000001192.png [input]",
             "upload": "image"
         },
         "class_type": "LoadImage",
