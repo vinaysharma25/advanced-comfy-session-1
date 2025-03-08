@@ -14,7 +14,7 @@
     },
     "11": {
         "inputs": {
-            "seed": 512407493877322,
+            "seed": 412354971248391,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -65,8 +65,8 @@
                 0
             ],
             "mask": [
-                "16",
-                1
+                "28",
+                0
             ]
         },
         "class_type": "SetLatentNoiseMask",
@@ -101,7 +101,7 @@
     },
     "16": {
         "inputs": {
-            "image": "clipspace/clipspace-mask-96496.30000001192.png [input]",
+            "image": "L1_ebae23ff-f31d-459a-a093-9104c4e4def8.webp",
             "upload": "image"
         },
         "class_type": "LoadImage",
@@ -111,7 +111,7 @@
     },
     "17": {
         "inputs": {
-            "text": "toy car, on a street, facing camera",
+            "text": "luggage, kept on a desk, in a forest",
             "clip": [
                 "15",
                 1
@@ -262,6 +262,53 @@
         "class_type": "ControlNetLoader",
         "_meta": {
             "title": "Load ControlNet Model"
+        }
+    },
+    "28": {
+        "inputs": {
+            "mask": [
+                "19",
+                1
+            ]
+        },
+        "class_type": "InvertMask (segment anything)",
+        "_meta": {
+            "title": "InvertMask (segment anything)"
+        }
+    },
+    "29": {
+        "inputs": {
+            "low_threshold": 0.4,
+            "high_threshold": 0.8,
+            "image": [
+                "19",
+                0
+            ]
+        },
+        "class_type": "Canny",
+        "_meta": {
+            "title": "Canny"
+        }
+    },
+    "31": {
+        "inputs": {
+            "control_net_name": "control-lora-canny-rank256.safetensors"
+        },
+        "class_type": "ControlNetLoader",
+        "_meta": {
+            "title": "Load ControlNet Model"
+        }
+    },
+    "32": {
+        "inputs": {
+            "images": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
         }
     }
 }
