@@ -134,5 +134,57 @@
         "_meta": {
             "title": "Save Image"
         }
+    },
+    "19": {
+        "inputs": {
+            "prompt": "object",
+            "threshold": 0.3,
+            "sam_model": [
+                "20",
+                0
+            ],
+            "grounding_dino_model": [
+                "21",
+                0
+            ],
+            "image": [
+                "16",
+                0
+            ]
+        },
+        "class_type": "GroundingDinoSAMSegment (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoSAMSegment (segment anything)"
+        }
+    },
+    "20": {
+        "inputs": {
+            "model_name": "sam_vit_h (2.56GB)"
+        },
+        "class_type": "SAMModelLoader (segment anything)",
+        "_meta": {
+            "title": "SAMModelLoader (segment anything)"
+        }
+    },
+    "21": {
+        "inputs": {
+            "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+        },
+        "class_type": "GroundingDinoModelLoader (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoModelLoader (segment anything)"
+        }
+    },
+    "22": {
+        "inputs": {
+            "images": [
+                "19",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
     }
 }
