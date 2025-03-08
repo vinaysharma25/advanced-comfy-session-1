@@ -1,6 +1,6 @@
 {
-    "last_node_id": 13,
-    "last_link_id": 17,
+    "last_node_id": 14,
+    "last_link_id": 18,
     "nodes": [
         {
             "id": 5,
@@ -50,7 +50,7 @@
                 262
             ],
             "flags": {},
-            "order": 8,
+            "order": 9,
             "mode": 0,
             "inputs": [
                 {
@@ -90,7 +90,7 @@
                 "Node name for S&R": "KSampler"
             },
             "widgets_values": [
-                156680208700286,
+                500213667411541,
                 "randomize",
                 20,
                 8,
@@ -111,7 +111,7 @@
                 46
             ],
             "flags": {},
-            "order": 9,
+            "order": 10,
             "mode": 0,
             "inputs": [
                 {
@@ -154,7 +154,7 @@
                 58
             ],
             "flags": {},
-            "order": 10,
+            "order": 11,
             "mode": 0,
             "inputs": [
                 {
@@ -217,13 +217,13 @@
                 82
             ],
             "flags": {},
-            "order": 2,
+            "order": 6,
             "mode": 0,
             "inputs": [
                 {
                     "name": "image",
                     "type": "IMAGE",
-                    "link": null
+                    "link": 18
                 }
             ],
             "outputs": [
@@ -260,7 +260,7 @@
                 246
             ],
             "flags": {},
-            "order": 4,
+            "order": 7,
             "mode": 0,
             "inputs": [
                 {
@@ -274,87 +274,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
-        },
-        {
-            "id": 7,
-            "type": "CLIPTextEncode",
-            "pos": [
-                341.58294677734375,
-                334.4825439453125
-            ],
-            "size": [
-                425.27801513671875,
-                180.6060791015625
-            ],
-            "flags": {},
-            "order": 6,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "clip",
-                    "type": "CLIP",
-                    "link": 5
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "CONDITIONING",
-                    "type": "CONDITIONING",
-                    "links": [
-                        14
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "CLIPTextEncode"
             },
-            "widgets_values": [
-                "text, watermark"
-            ]
-        },
-        {
-            "id": 6,
-            "type": "CLIPTextEncode",
-            "pos": [
-                324.73870849609375,
-                54.891212463378906
-            ],
-            "size": [
-                422.84503173828125,
-                164.31304931640625
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "clip",
-                    "type": "CLIP",
-                    "link": 3
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "CONDITIONING",
-                    "type": "CONDITIONING",
-                    "links": [
-                        13
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "CLIPTextEncode"
-            },
-            "widgets_values": [
-                "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
-            ]
+            "widgets_values": []
         },
         {
             "id": 4,
@@ -368,7 +289,7 @@
                 98
             ],
             "flags": {},
-            "order": 3,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -420,7 +341,7 @@
                 186
             ],
             "flags": {},
-            "order": 7,
+            "order": 8,
             "mode": 0,
             "inputs": [
                 {
@@ -477,6 +398,126 @@
                 1,
                 0,
                 1
+            ]
+        },
+        {
+            "id": 14,
+            "type": "LoadImage",
+            "pos": [
+                -87.44511413574219,
+                -202.20668029785156
+            ],
+            "size": [
+                315,
+                314
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        18
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "ComfyUI_00010_ (2).png",
+                "image"
+            ]
+        },
+        {
+            "id": 7,
+            "type": "CLIPTextEncode",
+            "pos": [
+                341.58294677734375,
+                334.4825439453125
+            ],
+            "size": [
+                425.27801513671875,
+                180.6060791015625
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        14
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "text, watermark, nsfw, nude, naked"
+            ]
+        },
+        {
+            "id": 6,
+            "type": "CLIPTextEncode",
+            "pos": [
+                324.73870849609375,
+                54.891212463378906
+            ],
+            "size": [
+                422.84503173828125,
+                164.31304931640625
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 3
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "boy standing in room"
             ]
         }
     ],
@@ -600,16 +641,24 @@
             3,
             2,
             "CONDITIONING"
+        ],
+        [
+            18,
+            14,
+            0,
+            11,
+            0,
+            "IMAGE"
         ]
     ],
     "groups": [],
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.9090909090909091,
+            "scale": 0.5131581182307069,
             "offset": [
-                -145.75899229756328,
-                478.0571807789079
+                342.74061443342407,
+                568.6351905416586
             ]
         }
     },
