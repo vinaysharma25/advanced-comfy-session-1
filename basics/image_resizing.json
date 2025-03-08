@@ -1,0 +1,159 @@
+{
+    "last_node_id": 12,
+    "last_link_id": 12,
+    "nodes": [
+        {
+            "id": 12,
+            "type": "PreviewImage",
+            "pos": [
+                762.3972778320312,
+                330.68243408203125
+            ],
+            "size": [
+                223.44461059570312,
+                246
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 12
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            }
+        },
+        {
+            "id": 10,
+            "type": "ImageResize+",
+            "pos": [
+                378.5820007324219,
+                353.9158935546875
+            ],
+            "size": [
+                315,
+                218
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 11
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        12
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "width",
+                    "type": "INT",
+                    "links": null
+                },
+                {
+                    "name": "height",
+                    "type": "INT",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "aux_id": "cubiq/ComfyUI_essentials",
+                "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+                "Node name for S&R": "ImageResize+"
+            },
+            "widgets_values": [
+                1024,
+                1024,
+                "nearest",
+                "keep proportion",
+                "always",
+                0
+            ]
+        },
+        {
+            "id": 11,
+            "type": "LoadImage",
+            "pos": [
+                -49.70135498046875,
+                322.4324645996094
+            ],
+            "size": [
+                315,
+                314
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        11
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "ComfyUI_00003_ (3).png",
+                "image"
+            ]
+        }
+    ],
+    "links": [
+        [
+            11,
+            11,
+            0,
+            10,
+            0,
+            "IMAGE"
+        ],
+        [
+            12,
+            10,
+            0,
+            12,
+            0,
+            "IMAGE"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 0.7513148009015777,
+            "offset": [
+                396.7192031903406,
+                156.6228497827473
+            ]
+        }
+    },
+    "version": 0.4
+}
