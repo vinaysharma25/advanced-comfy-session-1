@@ -19,5 +19,26 @@
     "pip": [],
     "apt": [],
     "cached": "False"
+  },
+  {
+    "name": "ComfyUI Depth Anything TensorRT",
+    "url": "https://github.com/yuvraj108c/ComfyUI-Depth-Anything-Tensorrt",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "yuvraj108c",
+      "title": "ComfyUI Depth Anything TensorRT",
+      "id": "depth-anything-tensorrt",
+      "reference": "https://github.com/yuvraj108c/ComfyUI-Depth-Anything-Tensorrt",
+      "files": [
+        "https://github.com/yuvraj108c/ComfyUI-Depth-Anything-Tensorrt"
+      ],
+      "install_type": "git-clone",
+      "description": "This extension provides a ComfyUI Custom Node implementation of the [a/Depth-Anything-Tensorrt](https://github.com/spacewalk01/depth-anything-tensorrt) in Python for ultra fast depth map generation"
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False"
   }
 ]
