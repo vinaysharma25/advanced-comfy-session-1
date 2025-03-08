@@ -1,0 +1,617 @@
+{
+    "last_node_id": 13,
+    "last_link_id": 17,
+    "nodes": [
+        {
+            "id": 5,
+            "type": "EmptyLatentImage",
+            "pos": [
+                473,
+                609
+            ],
+            "size": [
+                315,
+                106
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        2
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "EmptyLatentImage"
+            },
+            "widgets_values": [
+                512,
+                512,
+                1
+            ]
+        },
+        {
+            "id": 3,
+            "type": "KSampler",
+            "pos": [
+                863,
+                186
+            ],
+            "size": [
+                315,
+                262
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 1
+                },
+                {
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "link": 16
+                },
+                {
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "link": 17
+                },
+                {
+                    "name": "latent_image",
+                    "type": "LATENT",
+                    "link": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        7
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "KSampler"
+            },
+            "widgets_values": [
+                156680208700286,
+                "randomize",
+                20,
+                8,
+                "euler",
+                "normal",
+                1
+            ]
+        },
+        {
+            "id": 8,
+            "type": "VAEDecode",
+            "pos": [
+                1209,
+                188
+            ],
+            "size": [
+                210,
+                46
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "samples",
+                    "type": "LATENT",
+                    "link": 7
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": 8
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        9
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "VAEDecode"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 9,
+            "type": "SaveImage",
+            "pos": [
+                1451,
+                189
+            ],
+            "size": [
+                210,
+                58
+            ],
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 9
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15"
+            },
+            "widgets_values": [
+                "ComfyUI"
+            ]
+        },
+        {
+            "id": 12,
+            "type": "ControlNetLoader",
+            "pos": [
+                343.06353759765625,
+                -92.73516845703125
+            ],
+            "size": [
+                315,
+                58
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "CONTROL_NET",
+                    "type": "CONTROL_NET",
+                    "links": [
+                        11
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "ControlNetLoader"
+            },
+            "widgets_values": [
+                "control_v11f1p_sd15_depth_fp16.safetensors"
+            ]
+        },
+        {
+            "id": 11,
+            "type": "DepthAnythingPreprocessor",
+            "pos": [
+                335.41180419921875,
+                -238.12435913085938
+            ],
+            "size": [
+                315,
+                82
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        10,
+                        12
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "Fannovel16/comfyui_controlnet_aux",
+                "ver": "1e9eac6377c882da8bb360c7544607036904362c",
+                "Node name for S&R": "DepthAnythingPreprocessor",
+                "cnr_id": "comfyui_controlnet_aux"
+            },
+            "widgets_values": [
+                "depth_anything_vitl14.pth",
+                512
+            ]
+        },
+        {
+            "id": 10,
+            "type": "PreviewImage",
+            "pos": [
+                1287.353759765625,
+                -257.0108947753906
+            ],
+            "size": [
+                210,
+                246
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 10
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            }
+        },
+        {
+            "id": 7,
+            "type": "CLIPTextEncode",
+            "pos": [
+                341.58294677734375,
+                334.4825439453125
+            ],
+            "size": [
+                425.27801513671875,
+                180.6060791015625
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        14
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "text, watermark"
+            ]
+        },
+        {
+            "id": 6,
+            "type": "CLIPTextEncode",
+            "pos": [
+                324.73870849609375,
+                54.891212463378906
+            ],
+            "size": [
+                422.84503173828125,
+                164.31304931640625
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 3
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
+            ]
+        },
+        {
+            "id": 4,
+            "type": "CheckpointLoaderSimple",
+            "pos": [
+                -128.99879455566406,
+                221.38059997558594
+            ],
+            "size": [
+                315,
+                98
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "links": [
+                        1
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "links": [
+                        3,
+                        5
+                    ],
+                    "slot_index": 1
+                },
+                {
+                    "name": "VAE",
+                    "type": "VAE",
+                    "links": [
+                        8,
+                        15
+                    ],
+                    "slot_index": 2
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CheckpointLoaderSimple"
+            },
+            "widgets_values": [
+                "epicrealism_naturalSinRC1VAE.safetensors"
+            ]
+        },
+        {
+            "id": 13,
+            "type": "ControlNetApplyAdvanced",
+            "pos": [
+                853.8949584960938,
+                -143.6324462890625
+            ],
+            "size": [
+                315,
+                186
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "link": 13
+                },
+                {
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "link": 14
+                },
+                {
+                    "name": "control_net",
+                    "type": "CONTROL_NET",
+                    "link": 11
+                },
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 12
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "shape": 7,
+                    "link": 15
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "links": [
+                        16
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "links": [
+                        17
+                    ],
+                    "slot_index": 1
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "ControlNetApplyAdvanced"
+            },
+            "widgets_values": [
+                1,
+                0,
+                1
+            ]
+        }
+    ],
+    "links": [
+        [
+            1,
+            4,
+            0,
+            3,
+            0,
+            "MODEL"
+        ],
+        [
+            2,
+            5,
+            0,
+            3,
+            3,
+            "LATENT"
+        ],
+        [
+            3,
+            4,
+            1,
+            6,
+            0,
+            "CLIP"
+        ],
+        [
+            5,
+            4,
+            1,
+            7,
+            0,
+            "CLIP"
+        ],
+        [
+            7,
+            3,
+            0,
+            8,
+            0,
+            "LATENT"
+        ],
+        [
+            8,
+            4,
+            2,
+            8,
+            1,
+            "VAE"
+        ],
+        [
+            9,
+            8,
+            0,
+            9,
+            0,
+            "IMAGE"
+        ],
+        [
+            10,
+            11,
+            0,
+            10,
+            0,
+            "IMAGE"
+        ],
+        [
+            11,
+            12,
+            0,
+            13,
+            2,
+            "CONTROL_NET"
+        ],
+        [
+            12,
+            11,
+            0,
+            13,
+            3,
+            "IMAGE"
+        ],
+        [
+            13,
+            6,
+            0,
+            13,
+            0,
+            "CONDITIONING"
+        ],
+        [
+            14,
+            7,
+            0,
+            13,
+            1,
+            "CONDITIONING"
+        ],
+        [
+            15,
+            4,
+            2,
+            13,
+            4,
+            "VAE"
+        ],
+        [
+            16,
+            13,
+            0,
+            3,
+            1,
+            "CONDITIONING"
+        ],
+        [
+            17,
+            13,
+            1,
+            3,
+            2,
+            "CONDITIONING"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 0.9090909090909091,
+            "offset": [
+                -145.75899229756328,
+                478.0571807789079
+            ]
+        }
+    },
+    "version": 0.4
+}
