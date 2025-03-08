@@ -20,6 +20,14 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
+  - id: pv83l25txlq
+    name: product_photography_api.json
+    file: inpainting_and_outpainting/product_photography_api.json
+    version: 0
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -29,3 +37,7 @@ normal_workflows:
     name: basic_outpainting.json
     file: inpainting_and_outpainting/basic_outpainting.json
     version: 1
+  - id: bachzewemb
+    name: product_photography.json
+    file: inpainting_and_outpainting/product_photography.json
+    version: 0
