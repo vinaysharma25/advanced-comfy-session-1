@@ -3,5 +3,17 @@ models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
-workflows: []
-normal_workflows: []
+workflows:
+  - id: wvaud9ebrba
+    name: basic_inpainting_api.json
+    file: inpainting_and_outpainting/basic_inpainting_api.json
+    version: .nan
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
+normal_workflows:
+  - id: dt1vvo7wj2u
+    name: basic_inpainting.json
+    file: inpainting_and_outpainting/basic_inpainting.json
+    version: .nan
