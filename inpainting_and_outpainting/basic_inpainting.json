@@ -43,46 +43,6 @@
             ]
         },
         {
-            "id": 6,
-            "type": "CLIPTextEncode",
-            "pos": [
-                415,
-                186
-            ],
-            "size": [
-                422.84503173828125,
-                164.31304931640625
-            ],
-            "flags": {},
-            "order": 2,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "clip",
-                    "type": "CLIP",
-                    "link": 3
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "CONDITIONING",
-                    "type": "CONDITIONING",
-                    "links": [
-                        4
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "CLIPTextEncode"
-            },
-            "widgets_values": [
-                "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
-            ]
-        },
-        {
             "id": 3,
             "type": "KSampler",
             "pos": [
@@ -134,7 +94,7 @@
                 "Node name for S&R": "KSampler"
             },
             "widgets_values": [
-                156680208700286,
+                512407493877322,
                 "randomize",
                 20,
                 8,
@@ -187,36 +147,6 @@
             "widgets_values": []
         },
         {
-            "id": 9,
-            "type": "SaveImage",
-            "pos": [
-                1451,
-                189
-            ],
-            "size": [
-                210,
-                58
-            ],
-            "flags": {},
-            "order": 8,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "images",
-                    "type": "IMAGE",
-                    "link": 9
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15"
-            },
-            "widgets_values": [
-                "ComfyUI"
-            ]
-        },
-        {
             "id": 12,
             "type": "SetLatentNoiseMask",
             "pos": [
@@ -256,7 +186,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "SetLatentNoiseMask"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 10,
@@ -298,7 +229,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "VAEEncode"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 4,
@@ -391,8 +323,78 @@
                 "Node name for S&R": "LoadImage"
             },
             "widgets_values": [
-                "flowscale_user_default_fal-img_00003_.png",
+                "clipspace/clipspace-mask-96496.30000001192.png [input]",
                 "image"
+            ]
+        },
+        {
+            "id": 6,
+            "type": "CLIPTextEncode",
+            "pos": [
+                415,
+                186
+            ],
+            "size": [
+                422.84503173828125,
+                164.31304931640625
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 3
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        4
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "toy car, on a street, facing camera"
+            ]
+        },
+        {
+            "id": 9,
+            "type": "SaveImage",
+            "pos": [
+                843.7882080078125,
+                687.8328247070312
+            ],
+            "size": [
+                249.65234375,
+                270
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 9
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15"
+            },
+            "widgets_values": [
+                "ComfyUI"
             ]
         }
     ],
@@ -506,11 +508,11 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 1,
-            "offset": {
-                "0": 253.65695190429688,
-                "1": -205.10629272460938
-            }
+            "scale": 1.1000000000000008,
+            "offset": [
+                163.11929321288977,
+                -276.57193548029164
+            ]
         }
     },
     "version": 0.4
