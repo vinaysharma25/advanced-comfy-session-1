@@ -14,7 +14,7 @@
     },
     "11": {
         "inputs": {
-            "seed": 412354971248391,
+            "seed": 589157687023627,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -101,7 +101,7 @@
     },
     "16": {
         "inputs": {
-            "image": "L1_ebae23ff-f31d-459a-a093-9104c4e4def8.webp",
+            "image": "delsey-chatelet-air-2.0-00167681015-01_1800x1800.webp",
             "upload": "image"
         },
         "class_type": "LoadImage",
@@ -249,41 +249,6 @@
         "class_type": "InvertMask (segment anything)",
         "_meta": {
             "title": "InvertMask (segment anything)"
-        }
-    },
-    "29": {
-        "inputs": {
-            "low_threshold": 0.4,
-            "high_threshold": 0.8,
-            "image": [
-                "19",
-                0
-            ]
-        },
-        "class_type": "Canny",
-        "_meta": {
-            "title": "Canny"
-        }
-    },
-    "31": {
-        "inputs": {
-            "control_net_name": "control-lora-canny-rank256.safetensors"
-        },
-        "class_type": "ControlNetLoader",
-        "_meta": {
-            "title": "Load ControlNet Model"
-        }
-    },
-    "32": {
-        "inputs": {
-            "images": [
-                "29",
-                0
-            ]
-        },
-        "class_type": "PreviewImage",
-        "_meta": {
-            "title": "Preview Image"
         }
     },
     "33": {
