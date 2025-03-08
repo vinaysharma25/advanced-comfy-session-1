@@ -25,12 +25,12 @@
                 0
             ],
             "positive": [
-                "17",
+                "26",
                 0
             ],
             "negative": [
-                "10",
-                0
+                "26",
+                1
             ],
             "latent_image": [
                 "13",
@@ -185,6 +185,83 @@
         "class_type": "PreviewImage",
         "_meta": {
             "title": "Preview Image"
+        }
+    },
+    "23": {
+        "inputs": {
+            "da_model": [
+                "24",
+                0
+            ],
+            "images": [
+                "16",
+                0
+            ]
+        },
+        "class_type": "DepthAnything_V2",
+        "_meta": {
+            "title": "Depth Anything V2"
+        }
+    },
+    "24": {
+        "inputs": {
+            "model": "depth_anything_v2_vitl_fp32.safetensors"
+        },
+        "class_type": "DownloadAndLoadDepthAnythingV2Model",
+        "_meta": {
+            "title": "DownloadAndLoadDepthAnythingV2Model"
+        }
+    },
+    "25": {
+        "inputs": {
+            "images": [
+                "23",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "26": {
+        "inputs": {
+            "strength": 1,
+            "start_percent": 0,
+            "end_percent": 1,
+            "positive": [
+                "17",
+                0
+            ],
+            "negative": [
+                "10",
+                0
+            ],
+            "control_net": [
+                "27",
+                0
+            ],
+            "image": [
+                "23",
+                0
+            ],
+            "vae": [
+                "15",
+                2
+            ]
+        },
+        "class_type": "ControlNetApplyAdvanced",
+        "_meta": {
+            "title": "Apply ControlNet"
+        }
+    },
+    "27": {
+        "inputs": {
+            "control_net_name": "control_v11f1p_sd15_depth_fp16.safetensors"
+        },
+        "class_type": "ControlNetLoader",
+        "_meta": {
+            "title": "Load ControlNet Model"
         }
     }
 }
