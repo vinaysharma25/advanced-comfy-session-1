@@ -1,7 +1,7 @@
 {
     "3": {
         "inputs": {
-            "seed": 156680208700286,
+            "seed": 500213667411541,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -51,7 +51,7 @@
     },
     "6": {
         "inputs": {
-            "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+            "text": "boy standing in room",
             "clip": [
                 "4",
                 1
@@ -64,7 +64,7 @@
     },
     "7": {
         "inputs": {
-            "text": "text, watermark",
+            "text": "text, watermark, nsfw, nude, naked",
             "clip": [
                 "4",
                 1
@@ -119,7 +119,11 @@
     "11": {
         "inputs": {
             "ckpt_name": "depth_anything_vitl14.pth",
-            "resolution": 512
+            "resolution": 512,
+            "image": [
+                "14",
+                0
+            ]
         },
         "class_type": "DepthAnythingPreprocessor",
         "_meta": {
@@ -164,6 +168,16 @@
         "class_type": "ControlNetApplyAdvanced",
         "_meta": {
             "title": "Apply ControlNet"
+        }
+    },
+    "14": {
+        "inputs": {
+            "image": "ComfyUI_00010_ (2).png",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
         }
     }
 }
