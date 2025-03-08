@@ -1,6 +1,6 @@
 {
-    "last_node_id": 34,
-    "last_link_id": 58,
+    "last_node_id": 35,
+    "last_link_id": 61,
     "nodes": [
         {
             "id": 20,
@@ -212,7 +212,7 @@
                 {
                     "name": "images",
                     "type": "IMAGE",
-                    "link": 51
+                    "link": 61
                 }
             ],
             "outputs": [],
@@ -222,82 +222,6 @@
                 "Node name for S&R": "PreviewImage"
             },
             "widgets_values": []
-        },
-        {
-            "id": 33,
-            "type": "DepthAnythingPreprocessor",
-            "pos": [
-                1186.95068359375,
-                -325.9580078125
-            ],
-            "size": [
-                315,
-                82
-            ],
-            "flags": {},
-            "order": 9,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "image",
-                    "type": "IMAGE",
-                    "link": 57
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "links": [
-                        50,
-                        51
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "aux_id": "Fannovel16/comfyui_controlnet_aux",
-                "ver": "1e9eac6377c882da8bb360c7544607036904362c",
-                "Node name for S&R": "DepthAnythingPreprocessor",
-                "cnr_id": "comfyui_controlnet_aux"
-            },
-            "widgets_values": [
-                "depth_anything_vitl14.pth",
-                512
-            ]
-        },
-        {
-            "id": 27,
-            "type": "ControlNetLoader",
-            "pos": [
-                1194.6024169921875,
-                -180.56883239746094
-            ],
-            "size": [
-                315,
-                58
-            ],
-            "flags": {},
-            "order": 2,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "CONTROL_NET",
-                    "type": "CONTROL_NET",
-                    "links": [
-                        31
-                    ]
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "ControlNetLoader"
-            },
-            "widgets_values": [
-                "control_v11f1p_sd15_depth_fp16.safetensors"
-            ]
         },
         {
             "id": 26,
@@ -332,7 +256,7 @@
                 {
                     "name": "image",
                     "type": "IMAGE",
-                    "link": 50
+                    "link": 60
                 },
                 {
                     "name": "vae",
@@ -382,7 +306,7 @@
                 98
             ],
             "flags": {},
-            "order": 3,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -548,7 +472,7 @@
                 "Node name for S&R": "KSampler"
             },
             "widgets_values": [
-                589157687023627,
+                348357093790903,
                 "randomize",
                 20,
                 8,
@@ -652,7 +576,7 @@
                 46
             ],
             "flags": {},
-            "order": 10,
+            "order": 9,
             "mode": 0,
             "inputs": [
                 {
@@ -682,6 +606,104 @@
                 "Node name for S&R": "VAEEncode"
             },
             "widgets_values": []
+        },
+        {
+            "id": 34,
+            "type": "ImageResize+",
+            "pos": [
+                398.168701171875,
+                813.2986450195312
+            ],
+            "size": [
+                315,
+                218
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 55
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        56,
+                        58,
+                        59
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "width",
+                    "type": "INT",
+                    "links": null
+                },
+                {
+                    "name": "height",
+                    "type": "INT",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "aux_id": "cubiq/ComfyUI_essentials",
+                "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+                "Node name for S&R": "ImageResize+"
+            },
+            "widgets_values": [
+                1024,
+                1024,
+                "nearest",
+                "keep proportion",
+                "always",
+                0
+            ]
+        },
+        {
+            "id": 16,
+            "type": "LoadImage",
+            "pos": [
+                12.277090072631836,
+                801.5881958007812
+            ],
+            "size": [
+                315,
+                314
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        55
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": [],
+                    "slot_index": 1
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "image (5).webp",
+                "image"
+            ]
         },
         {
             "id": 17,
@@ -720,19 +742,19 @@
                 "Node name for S&R": "CLIPTextEncode"
             },
             "widgets_values": [
-                "luggage, kept on a desk, in a forest "
+                "water bottle, kept on a desk, in a forest background"
             ]
         },
         {
-            "id": 16,
-            "type": "LoadImage",
+            "id": 27,
+            "type": "ControlNetLoader",
             "pos": [
-                12.277090072631836,
-                801.5881958007812
+                1194.6024169921875,
+                -180.56883239746094
             ],
             "size": [
                 315,
-                314
+                58
             ],
             "flags": {},
             "order": 4,
@@ -740,49 +762,41 @@
             "inputs": [],
             "outputs": [
                 {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
+                    "name": "CONTROL_NET",
+                    "type": "CONTROL_NET",
                     "links": [
-                        55
-                    ],
-                    "slot_index": 0
-                },
-                {
-                    "name": "MASK",
-                    "type": "MASK",
-                    "links": [],
-                    "slot_index": 1
+                        31
+                    ]
                 }
             ],
             "properties": {
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
-                "Node name for S&R": "LoadImage"
+                "Node name for S&R": "ControlNetLoader"
             },
             "widgets_values": [
-                "delsey-chatelet-air-2.0-00167681015-01_1800x1800.webp",
-                "image"
+                "control_v11p_sd15_lineart_fp16.safetensors"
             ]
         },
         {
-            "id": 34,
-            "type": "ImageResize+",
+            "id": 35,
+            "type": "LineArtPreprocessor",
             "pos": [
-                398.168701171875,
-                813.2986450195312
+                1174.868408203125,
+                -322.2539978027344
             ],
             "size": [
                 315,
-                218
+                82
             ],
             "flags": {},
-            "order": 7,
+            "order": 10,
             "mode": 0,
             "inputs": [
                 {
                     "name": "image",
                     "type": "IMAGE",
-                    "link": 55
+                    "link": 59
                 }
             ],
             "outputs": [
@@ -790,35 +804,20 @@
                     "name": "IMAGE",
                     "type": "IMAGE",
                     "links": [
-                        56,
-                        57,
-                        58
+                        60,
+                        61
                     ],
                     "slot_index": 0
-                },
-                {
-                    "name": "width",
-                    "type": "INT",
-                    "links": null
-                },
-                {
-                    "name": "height",
-                    "type": "INT",
-                    "links": null
                 }
             ],
             "properties": {
-                "aux_id": "cubiq/ComfyUI_essentials",
-                "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
-                "Node name for S&R": "ImageResize+"
+                "aux_id": "Fannovel16/comfyui_controlnet_aux",
+                "ver": "1e9eac6377c882da8bb360c7544607036904362c",
+                "Node name for S&R": "LineArtPreprocessor"
             },
             "widgets_values": [
-                1024,
-                1024,
-                "nearest",
-                "keep proportion",
-                "always",
-                0
+                "disable",
+                512
             ]
         }
     ],
@@ -968,22 +967,6 @@
             "MASK"
         ],
         [
-            50,
-            33,
-            0,
-            26,
-            3,
-            "IMAGE"
-        ],
-        [
-            51,
-            33,
-            0,
-            25,
-            0,
-            "IMAGE"
-        ],
-        [
             52,
             26,
             0,
@@ -1016,18 +999,34 @@
             "IMAGE"
         ],
         [
-            57,
-            34,
-            0,
-            33,
-            0,
-            "IMAGE"
-        ],
-        [
             58,
             34,
             0,
             14,
+            0,
+            "IMAGE"
+        ],
+        [
+            59,
+            34,
+            0,
+            35,
+            0,
+            "IMAGE"
+        ],
+        [
+            60,
+            35,
+            0,
+            26,
+            3,
+            "IMAGE"
+        ],
+        [
+            61,
+            35,
+            0,
+            25,
             0,
             "IMAGE"
         ]
@@ -1102,10 +1101,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.5644739300537773,
+            "scale": 0.826446280991736,
             "offset": [
-                540.4817250674971,
-                194.58744407902964
+                141.32527748422976,
+                644.7626469256611
             ]
         }
     },
