@@ -1,3 +1,23 @@
-
-[]
-      
+[
+  {
+    "name": "segment anything",
+    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "storyicon",
+      "title": "segment anything",
+      "id": "sam",
+      "reference": "https://github.com/storyicon/comfyui_segment_anything",
+      "files": [
+        "https://github.com/storyicon/comfyui_segment_anything"
+      ],
+      "install_type": "git-clone",
+      "description": "Based on GroundingDino and SAM, use semantic strings to segment any element in an image. The comfyui version of sd-webui-segment-anything."
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False"
+  }
+]
