@@ -1,11 +1,11 @@
 {
     "3": {
         "inputs": {
-            "seed": 1005043984364030,
+            "seed": 492305295044545,
             "steps": 20,
             "cfg": 8,
-            "sampler_name": "euler",
-            "scheduler": "normal",
+            "sampler_name": "dpmpp_2m_sde",
+            "scheduler": "karras",
             "denoise": 1,
             "model": [
                 "4",
@@ -40,7 +40,7 @@
     },
     "6": {
         "inputs": {
-            "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+            "text": "classy room with windows",
             "clip": [
                 "4",
                 1
@@ -96,9 +96,9 @@
     "10": {
         "inputs": {
             "left": 200,
-            "top": 0,
+            "top": 200,
             "right": 200,
-            "bottom": 0,
+            "bottom": 200,
             "feathering": 40,
             "image": [
                 "11",
@@ -112,7 +112,7 @@
     },
     "11": {
         "inputs": {
-            "image": "example.png",
+            "image": "ComfyUI_00018_.png",
             "upload": "image"
         },
         "class_type": "LoadImage",
