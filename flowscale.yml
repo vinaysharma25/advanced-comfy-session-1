@@ -28,6 +28,14 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
+  - id: 53gpta37fnw
+    name: image_resizing_api.json
+    file: basics/image_resizing_api.json
+    version: 0
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -41,3 +49,7 @@ normal_workflows:
     name: product_photography.json
     file: inpainting_and_outpainting/product_photography.json
     version: 5
+  - id: q3oer3g3ulq
+    name: image_resizing.json
+    file: basics/image_resizing.json
+    version: 0
