@@ -1,0 +1,286 @@
+{
+    "10": {
+        "inputs": {
+            "text": "text, watermark",
+            "clip": [
+                "15",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "11": {
+        "inputs": {
+            "seed": 348357093790903,
+            "steps": 20,
+            "cfg": 8,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1,
+            "model": [
+                "15",
+                0
+            ],
+            "positive": [
+                "26",
+                0
+            ],
+            "negative": [
+                "26",
+                1
+            ],
+            "latent_image": [
+                "13",
+                0
+            ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+            "title": "KSampler"
+        }
+    },
+    "12": {
+        "inputs": {
+            "samples": [
+                "11",
+                0
+            ],
+            "vae": [
+                "15",
+                2
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "13": {
+        "inputs": {
+            "samples": [
+                "14",
+                0
+            ],
+            "mask": [
+                "28",
+                0
+            ]
+        },
+        "class_type": "SetLatentNoiseMask",
+        "_meta": {
+            "title": "Set Latent Noise Mask"
+        }
+    },
+    "14": {
+        "inputs": {
+            "pixels": [
+                "34",
+                0
+            ],
+            "vae": [
+                "15",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "15": {
+        "inputs": {
+            "ckpt_name": "epicrealism_naturalSinRC1VAE.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+            "title": "Load Checkpoint"
+        }
+    },
+    "16": {
+        "inputs": {
+            "image": "image (5).webp",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "17": {
+        "inputs": {
+            "text": "water bottle, kept on a desk, in a forest background",
+            "clip": [
+                "15",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "18": {
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "12",
+                0
+            ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+            "title": "Save Image"
+        }
+    },
+    "19": {
+        "inputs": {
+            "prompt": "object",
+            "threshold": 0.3,
+            "sam_model": [
+                "20",
+                0
+            ],
+            "grounding_dino_model": [
+                "21",
+                0
+            ],
+            "image": [
+                "34",
+                0
+            ]
+        },
+        "class_type": "GroundingDinoSAMSegment (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoSAMSegment (segment anything)"
+        }
+    },
+    "20": {
+        "inputs": {
+            "model_name": "sam_vit_h (2.56GB)"
+        },
+        "class_type": "SAMModelLoader (segment anything)",
+        "_meta": {
+            "title": "SAMModelLoader (segment anything)"
+        }
+    },
+    "21": {
+        "inputs": {
+            "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+        },
+        "class_type": "GroundingDinoModelLoader (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoModelLoader (segment anything)"
+        }
+    },
+    "22": {
+        "inputs": {
+            "images": [
+                "19",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "25": {
+        "inputs": {
+            "images": [
+                "35",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "26": {
+        "inputs": {
+            "strength": 1,
+            "start_percent": 0,
+            "end_percent": 1,
+            "positive": [
+                "17",
+                0
+            ],
+            "negative": [
+                "10",
+                0
+            ],
+            "control_net": [
+                "27",
+                0
+            ],
+            "image": [
+                "35",
+                0
+            ],
+            "vae": [
+                "15",
+                2
+            ]
+        },
+        "class_type": "ControlNetApplyAdvanced",
+        "_meta": {
+            "title": "Apply ControlNet"
+        }
+    },
+    "27": {
+        "inputs": {
+            "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+        },
+        "class_type": "ControlNetLoader",
+        "_meta": {
+            "title": "Load ControlNet Model"
+        }
+    },
+    "28": {
+        "inputs": {
+            "mask": [
+                "19",
+                1
+            ]
+        },
+        "class_type": "InvertMask (segment anything)",
+        "_meta": {
+            "title": "InvertMask (segment anything)"
+        }
+    },
+    "34": {
+        "inputs": {
+            "width": 1024,
+            "height": 1024,
+            "interpolation": "nearest",
+            "method": "keep proportion",
+            "condition": "always",
+            "multiple_of": 0,
+            "image": [
+                "16",
+                0
+            ]
+        },
+        "class_type": "ImageResize+",
+        "_meta": {
+            "title": "🔧 Image Resize"
+        }
+    },
+    "35": {
+        "inputs": {
+            "coarse": "disable",
+            "resolution": 512,
+            "image": [
+                "34",
+                0
+            ]
+        },
+        "class_type": "LineArtPreprocessor",
+        "_meta": {
+            "title": "Realistic Lineart"
+        }
+    }
+}
