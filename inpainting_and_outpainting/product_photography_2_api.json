@@ -14,7 +14,7 @@
     },
     "11": {
         "inputs": {
-            "seed": 247475584195256,
+            "seed": 947518828103694,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -440,7 +440,7 @@
     },
     "46": {
         "inputs": {
-            "seed": 96809368317272,
+            "seed": 175897143202780,
             "steps": 40,
             "cfg": 2,
             "sampler_name": "dpmpp_2m_sde",
@@ -548,6 +548,96 @@
         "class_type": "Text Multiline",
         "_meta": {
             "title": "Text Multiline"
+        }
+    },
+    "54": {
+        "inputs": {
+            "mode": "Luminosity",
+            "blend_image": [
+                "47",
+                0
+            ],
+            "base_image": [
+                "36",
+                0
+            ]
+        },
+        "class_type": "Color Blend",
+        "_meta": {
+            "title": "Color Blend"
+        }
+    },
+    "55": {
+        "inputs": {
+            "blend_percentage": 0.2,
+            "image_a": [
+                "54",
+                0
+            ],
+            "image_b": [
+                "47",
+                0
+            ]
+        },
+        "class_type": "Image Blend",
+        "_meta": {
+            "title": "Image Blend"
+        }
+    },
+    "56": {
+        "inputs": {
+            "strength": 100,
+            "brightness": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "red": 0,
+            "green": 0,
+            "blue": 0,
+            "mode": "RGB",
+            "image": [
+                "55",
+                0
+            ]
+        },
+        "class_type": "LayerColor: AutoAdjustV2",
+        "_meta": {
+            "title": "LayerColor: AutoAdjust V2"
+        }
+    },
+    "57": {
+        "inputs": {
+            "images": [
+                "54",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "58": {
+        "inputs": {
+            "images": [
+                "55",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "59": {
+        "inputs": {
+            "images": [
+                "56",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
         }
     }
 }
