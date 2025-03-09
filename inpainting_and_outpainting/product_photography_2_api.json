@@ -14,7 +14,7 @@
     },
     "11": {
         "inputs": {
-            "seed": 348357093790903,
+            "seed": 247982060016368,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -101,7 +101,7 @@
     },
     "16": {
         "inputs": {
-            "image": "image (5).webp",
+            "image": "EraseBG.org (5).png",
             "upload": "image"
         },
         "class_type": "LoadImage",
@@ -281,6 +281,41 @@
         "class_type": "LineArtPreprocessor",
         "_meta": {
             "title": "Realistic Lineart"
+        }
+    },
+    "36": {
+        "inputs": {
+            "x": 0,
+            "y": 0,
+            "resize_source": true,
+            "destination": [
+                "12",
+                0
+            ],
+            "source": [
+                "34",
+                0
+            ],
+            "mask": [
+                "19",
+                1
+            ]
+        },
+        "class_type": "ImageCompositeMasked",
+        "_meta": {
+            "title": "ImageCompositeMasked"
+        }
+    },
+    "37": {
+        "inputs": {
+            "images": [
+                "36",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
         }
     }
 }
