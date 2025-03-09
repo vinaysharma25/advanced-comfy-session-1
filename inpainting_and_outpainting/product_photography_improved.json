@@ -1,6 +1,6 @@
 {
-    "last_node_id": 62,
-    "last_link_id": 86,
+    "last_node_id": 63,
+    "last_link_id": 87,
     "nodes": [
         {
             "id": 10,
@@ -1769,79 +1769,6 @@
             ]
         },
         {
-            "id": 58,
-            "type": "Image Blend",
-            "pos": [
-                4070.591064453125,
-                1838.3226318359375
-            ],
-            "size": [
-                315,
-                78
-            ],
-            "flags": {},
-            "order": 47,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "image_a",
-                    "type": "IMAGE",
-                    "link": 81
-                },
-                {
-                    "name": "image_b",
-                    "type": "IMAGE",
-                    "link": 82
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "image",
-                    "type": "IMAGE",
-                    "links": [
-                        83
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "aux_id": "WASasquatch/was-node-suite-comfyui",
-                "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
-                "Node name for S&R": "Image Blend"
-            },
-            "widgets_values": [
-                0.2
-            ]
-        },
-        {
-            "id": 59,
-            "type": "PreviewImage",
-            "pos": [
-                4116.5556640625,
-                2015.824462890625
-            ],
-            "size": [
-                210,
-                246
-            ],
-            "flags": {},
-            "order": 49,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "images",
-                    "type": "IMAGE",
-                    "link": 83
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "PreviewImage"
-            }
-        },
-        {
             "id": 57,
             "type": "LayerColor: ColorAdapter",
             "pos": [
@@ -2131,6 +2058,81 @@
                 "RGB"
             ],
             "color": "rgba(27, 89, 123, 0.7)"
+        },
+        {
+            "id": 63,
+            "type": "SaveImage",
+            "pos": [
+                4096.37939453125,
+                2013.6217041015625
+            ],
+            "size": [
+                315,
+                58
+            ],
+            "flags": {},
+            "order": 49,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 87
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15"
+            },
+            "widgets_values": [
+                "ComfyUI"
+            ]
+        },
+        {
+            "id": 58,
+            "type": "Image Blend",
+            "pos": [
+                4070.591064453125,
+                1838.3226318359375
+            ],
+            "size": [
+                315,
+                78
+            ],
+            "flags": {},
+            "order": 47,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image_a",
+                    "type": "IMAGE",
+                    "link": 81
+                },
+                {
+                    "name": "image_b",
+                    "type": "IMAGE",
+                    "link": 82
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "links": [
+                        87
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "WASasquatch/was-node-suite-comfyui",
+                "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
+                "Node name for S&R": "Image Blend"
+            },
+            "widgets_values": [
+                0.2
+            ]
         }
     ],
     "links": [
@@ -2703,14 +2705,6 @@
             "IMAGE"
         ],
         [
-            83,
-            58,
-            0,
-            59,
-            0,
-            "IMAGE"
-        ],
-        [
             84,
             57,
             0,
@@ -2731,6 +2725,14 @@
             55,
             0,
             62,
+            0,
+            "IMAGE"
+        ],
+        [
+            87,
+            58,
+            0,
+            63,
             0,
             "IMAGE"
         ]
@@ -2870,10 +2872,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.6830134553650705,
+            "scale": 0.7513148009015785,
             "offset": [
-                -2348.1927878071438,
-                -1559.2919445961938
+                -3134.8954443579846,
+                -1445.351104679375
             ]
         }
     },
