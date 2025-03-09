@@ -638,5 +638,130 @@
         "_meta": {
             "title": "Preview Image"
         }
+    },
+    "55": {
+        "inputs": {
+            "mode": "soft_light",
+            "blur_sigma": 5,
+            "blend_factor": 1,
+            "target": [
+                "50",
+                0
+            ],
+            "source": [
+                "29",
+                0
+            ],
+            "mask": [
+                "12",
+                1
+            ]
+        },
+        "class_type": "DetailTransfer",
+        "_meta": {
+            "title": "Detail Transfer"
+        }
+    },
+    "56": {
+        "inputs": {
+            "mode": "add",
+            "blur_type": "blur",
+            "blur_size": 5,
+            "factor": 1,
+            "images": [
+                "50",
+                0
+            ],
+            "detail": [
+                "55",
+                0
+            ]
+        },
+        "class_type": "RestoreDetail",
+        "_meta": {
+            "title": "Restore Detail"
+        }
+    },
+    "57": {
+        "inputs": {
+            "opacity": 80,
+            "image": [
+                "56",
+                0
+            ],
+            "color_ref_image": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "LayerColor: ColorAdapter",
+        "_meta": {
+            "title": "LayerColor: ColorAdapter"
+        }
+    },
+    "58": {
+        "inputs": {
+            "blend_percentage": 0.2,
+            "image_a": [
+                "57",
+                0
+            ],
+            "image_b": [
+                "55",
+                0
+            ]
+        },
+        "class_type": "Image Blend",
+        "_meta": {
+            "title": "Image Blend"
+        }
+    },
+    "59": {
+        "inputs": {
+            "images": [
+                "58",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "60": {
+        "inputs": {
+            "images": [
+                "57",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "61": {
+        "inputs": {
+            "images": [
+                "56",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "62": {
+        "inputs": {
+            "images": [
+                "55",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
     }
 }
