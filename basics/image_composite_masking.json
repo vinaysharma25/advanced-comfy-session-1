@@ -1,0 +1,253 @@
+{
+    "last_node_id": 14,
+    "last_link_id": 18,
+    "nodes": [
+        {
+            "id": 12,
+            "type": "LoadImage",
+            "pos": [
+                -191.98228454589844,
+                -104.43698120117188
+            ],
+            "size": [
+                315,
+                314
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        18
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "ComfyUI_00006_ (2).png",
+                "image"
+            ]
+        },
+        {
+            "id": 11,
+            "type": "LoadImage",
+            "pos": [
+                -542.9341430664062,
+                90.59982299804688
+            ],
+            "size": [
+                315,
+                314
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        17
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "ComfyUI_00014_.png",
+                "image"
+            ]
+        },
+        {
+            "id": 14,
+            "type": "PreviewImage",
+            "pos": [
+                651.4698486328125,
+                137.91212463378906
+            ],
+            "size": [
+                210,
+                246
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 13
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            }
+        },
+        {
+            "id": 10,
+            "type": "ImageCompositeMasked",
+            "pos": [
+                239.99386596679688,
+                60.18973159790039
+            ],
+            "size": [
+                315,
+                146
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "destination",
+                    "type": "IMAGE",
+                    "link": 18
+                },
+                {
+                    "name": "source",
+                    "type": "IMAGE",
+                    "link": 17
+                },
+                {
+                    "name": "mask",
+                    "type": "MASK",
+                    "shape": 7,
+                    "link": 12
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "ImageCompositeMasked"
+            },
+            "widgets_values": [
+                0,
+                0,
+                true
+            ]
+        },
+        {
+            "id": 13,
+            "type": "LoadImage",
+            "pos": [
+                -195.73146057128906,
+                266.10986328125
+            ],
+            "size": [
+                315,
+                314
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": []
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": [
+                        12
+                    ],
+                    "slot_index": 1
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "clipspace/clipspace-mask-220458.80000001192.png [input]",
+                "image"
+            ]
+        }
+    ],
+    "links": [
+        [
+            12,
+            13,
+            1,
+            10,
+            2,
+            "MASK"
+        ],
+        [
+            13,
+            10,
+            0,
+            14,
+            0,
+            "IMAGE"
+        ],
+        [
+            17,
+            11,
+            0,
+            10,
+            1,
+            "IMAGE"
+        ],
+        [
+            18,
+            12,
+            0,
+            10,
+            0,
+            "IMAGE"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 0.7513148009015778,
+            "offset": [
+                736.0415596963486,
+                202.72969734893346
+            ]
+        }
+    },
+    "version": 0.4
+}
