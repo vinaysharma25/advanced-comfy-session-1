@@ -716,18 +716,6 @@
             "title": "Image Blend"
         }
     },
-    "59": {
-        "inputs": {
-            "images": [
-                "58",
-                0
-            ]
-        },
-        "class_type": "PreviewImage",
-        "_meta": {
-            "title": "Preview Image"
-        }
-    },
     "60": {
         "inputs": {
             "images": [
@@ -762,6 +750,19 @@
         "class_type": "PreviewImage",
         "_meta": {
             "title": "Preview Image"
+        }
+    },
+    "63": {
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "58",
+                0
+            ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+            "title": "Save Image"
         }
     }
 }
