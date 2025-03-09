@@ -133,7 +133,7 @@
     },
     "20": {
         "inputs": {
-            "seed": 892118255492266,
+            "seed": 239840750919883,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -369,7 +369,7 @@
     },
     "35": {
         "inputs": {
-            "seed": 793791463149055,
+            "seed": 963132844518340,
             "steps": 40,
             "cfg": 2,
             "sampler_name": "dpmpp_2m_sde",
