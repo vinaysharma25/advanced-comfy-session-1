@@ -21,27 +21,6 @@
     "cached": "False"
   },
   {
-    "name": "ComfyUI-DepthAnythingV2",
-    "url": "https://github.com/kijai/ComfyUI-DepthAnythingV2",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone",
-    "details": {
-      "author": "kijai",
-      "title": "ComfyUI-DepthAnythingV2",
-      "id": "depth-anything-v2",
-      "reference": "https://github.com/kijai/ComfyUI-DepthAnythingV2",
-      "files": [
-        "https://github.com/kijai/ComfyUI-DepthAnythingV2"
-      ],
-      "install_type": "git-clone",
-      "description": "ComfyUI nodes to use [a/DepthAnythingV2](https://depth-anything-v2.github.io/)\nNOTE:Models autodownload to ComfyUI/models/depthanything from [a/https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main](https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main)"
-    },
-    "nodes": [],
-    "pip": [],
-    "apt": [],
-    "cached": "False"
-  },
-  {
     "name": "ComfyUI's ControlNet Auxiliary Preprocessors",
     "url": "https://github.com/Fannovel16/comfyui_controlnet_aux",
     "path": "custom_nodes",
