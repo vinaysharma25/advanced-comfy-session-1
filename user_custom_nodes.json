@@ -175,5 +175,31 @@
     "pip": [],
     "apt": [],
     "cached": "False"
+  },
+  {
+    "name": "WAS Node Suite",
+    "url": "https://github.com/WASasquatch/was-node-suite-comfyui",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "WASasquatch",
+      "title": "WAS Node Suite",
+      "id": "was",
+      "reference": "https://github.com/WASasquatch/was-node-suite-comfyui",
+      "pip": [
+        "numba"
+      ],
+      "files": [
+        "https://github.com/WASasquatch/was-node-suite-comfyui"
+      ],
+      "install_type": "git-clone",
+      "description": "A node suite for ComfyUI with many new nodes, such as image processing, text processing, and more."
+    },
+    "nodes": [],
+    "pip": [
+      "numba"
+    ],
+    "apt": [],
+    "cached": "False"
   }
 ]
