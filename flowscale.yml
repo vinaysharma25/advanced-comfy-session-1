@@ -84,14 +84,6 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
-  - id: dzr4bvbzf3h
-    name: product_photography_demo_workflow_api.json
-    file: inpainting_and_outpainting/product_photography_demo_workflow_api.json
-    version: 1
-    description: ''
-    inputs: []
-    outputs: []
-    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -133,7 +125,3 @@ normal_workflows:
     name: basic_relighting.json
     file: relighting/basic_relighting.json
     version: 0
-  - id: 9kuv4qt6gm9
-    name: product_photography_demo_workflow.json
-    file: inpainting_and_outpainting/product_photography_demo_workflow.json
-    version: 1
