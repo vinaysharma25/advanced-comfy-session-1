@@ -14,7 +14,7 @@
     },
     "11": {
         "inputs": {
-            "seed": 947518828103694,
+            "seed": 1080008058764095,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -440,7 +440,7 @@
     },
     "46": {
         "inputs": {
-            "seed": 175897143202780,
+            "seed": 396004018444653,
             "steps": 40,
             "cfg": 2,
             "sampler_name": "dpmpp_2m_sde",
@@ -632,6 +632,119 @@
         "inputs": {
             "images": [
                 "56",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "60": {
+        "inputs": {
+            "mode": "soft_light",
+            "blur_sigma": 5,
+            "blend_factor": 1,
+            "target": [
+                "56",
+                0
+            ],
+            "source": [
+                "36",
+                0
+            ],
+            "mask": [
+                "19",
+                1
+            ]
+        },
+        "class_type": "DetailTransfer",
+        "_meta": {
+            "title": "Detail Transfer"
+        }
+    },
+    "61": {
+        "inputs": {
+            "mode": "add",
+            "blur_type": "blur",
+            "blur_size": 5,
+            "factor": 1,
+            "images": [
+                "56",
+                0
+            ],
+            "detail": [
+                "60",
+                0
+            ]
+        },
+        "class_type": "RestoreDetail",
+        "_meta": {
+            "title": "Restore Detail"
+        }
+    },
+    "62": {
+        "inputs": {
+            "opacity": 80,
+            "image": [
+                "61",
+                0
+            ],
+            "color_ref_image": [
+                "36",
+                0
+            ]
+        },
+        "class_type": "LayerColor: ColorAdapter",
+        "_meta": {
+            "title": "LayerColor: ColorAdapter"
+        }
+    },
+    "63": {
+        "inputs": {
+            "blend_percentage": 0.2,
+            "image_a": [
+                "62",
+                0
+            ],
+            "image_b": [
+                "56",
+                0
+            ]
+        },
+        "class_type": "Image Blend",
+        "_meta": {
+            "title": "Image Blend"
+        }
+    },
+    "66": {
+        "inputs": {
+            "images": [
+                "60",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "67": {
+        "inputs": {
+            "images": [
+                "61",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "68": {
+        "inputs": {
+            "images": [
+                "63",
                 0
             ]
         },
