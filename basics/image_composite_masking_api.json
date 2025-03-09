@@ -1,0 +1,67 @@
+{
+    "10": {
+        "inputs": {
+            "x": 0,
+            "y": 0,
+            "resize_source": true,
+            "destination": [
+                "12",
+                0
+            ],
+            "source": [
+                "11",
+                0
+            ],
+            "mask": [
+                "13",
+                1
+            ]
+        },
+        "class_type": "ImageCompositeMasked",
+        "_meta": {
+            "title": "ImageCompositeMasked"
+        }
+    },
+    "11": {
+        "inputs": {
+            "image": "ComfyUI_00014_.png",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "12": {
+        "inputs": {
+            "image": "ComfyUI_00006_ (2).png",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "13": {
+        "inputs": {
+            "image": "clipspace/clipspace-mask-220458.80000001192.png [input]",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "14": {
+        "inputs": {
+            "images": [
+                "10",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    }
+}
