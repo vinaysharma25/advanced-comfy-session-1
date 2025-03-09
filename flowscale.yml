@@ -68,6 +68,14 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
+  - id: dy4f9bkx9c
+    name: image_composite_masking_api.json
+    file: basics/image_composite_masking_api.json
+    version: 0
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -101,3 +109,7 @@ normal_workflows:
     name: product_photography_improved.json
     file: inpainting_and_outpainting/product_photography_improved.json
     version: 7
+  - id: tz7od90a4r
+    name: image_composite_masking.json
+    file: basics/image_composite_masking.json
+    version: 0
