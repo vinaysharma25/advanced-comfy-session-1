@@ -131,22 +131,9 @@
             "title": "VAE Decode"
         }
     },
-    "19": {
-        "inputs": {
-            "filename_prefix": "ComfyUI",
-            "images": [
-                "18",
-                0
-            ]
-        },
-        "class_type": "SaveImage",
-        "_meta": {
-            "title": "Save Image"
-        }
-    },
     "20": {
         "inputs": {
-            "seed": 348357093790903,
+            "seed": 584521513808061,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -239,7 +226,7 @@
     },
     "25": {
         "inputs": {
-            "image": "image (5).webp",
+            "image": "L1_ebae23ff-f31d-459a-a093-9104c4e4def8.webp",
             "upload": "image"
         },
         "class_type": "LoadImage",
@@ -249,7 +236,7 @@
     },
     "26": {
         "inputs": {
-            "text": "water bottle, kept on a desk, in a forest background",
+            "text": "luggage, kept in forest, trees background",
             "clip": [
                 "17",
                 1
@@ -281,6 +268,53 @@
         "class_type": "LineArtPreprocessor",
         "_meta": {
             "title": "Realistic Lineart"
+        }
+    },
+    "29": {
+        "inputs": {
+            "x": 0,
+            "y": 0,
+            "resize_source": false,
+            "destination": [
+                "18",
+                0
+            ],
+            "source": [
+                "24",
+                0
+            ],
+            "mask": [
+                "12",
+                1
+            ]
+        },
+        "class_type": "ImageCompositeMasked",
+        "_meta": {
+            "title": "ImageCompositeMasked"
+        }
+    },
+    "30": {
+        "inputs": {
+            "images": [
+                "18",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "31": {
+        "inputs": {
+            "images": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
         }
     }
 }
