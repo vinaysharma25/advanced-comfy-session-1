@@ -146,7 +146,7 @@
     },
     "20": {
         "inputs": {
-            "seed": 913111357113647,
+            "seed": 180980258798096,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -431,7 +431,7 @@
     },
     "40": {
         "inputs": {
-            "seed": 422511302693639,
+            "seed": 946842775619392,
             "steps": 40,
             "cfg": 2,
             "sampler_name": "dpmpp_2m_sde",
@@ -632,6 +632,132 @@
         "inputs": {
             "images": [
                 "51",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "55": {
+        "inputs": {
+            "mode": "add",
+            "blur_sigma": 5,
+            "blend_factor": 1,
+            "target": [
+                "51",
+                0
+            ],
+            "source": [
+                "29",
+                0
+            ],
+            "mask": [
+                "12",
+                1
+            ]
+        },
+        "class_type": "DetailTransfer",
+        "_meta": {
+            "title": "Detail Transfer"
+        }
+    },
+    "56": {
+        "inputs": {
+            "mode": "add",
+            "blur_type": "blur",
+            "blur_size": 5,
+            "factor": 1,
+            "images": [
+                "51",
+                0
+            ],
+            "detail": [
+                "55",
+                0
+            ]
+        },
+        "class_type": "RestoreDetail",
+        "_meta": {
+            "title": "Restore Detail"
+        }
+    },
+    "57": {
+        "inputs": {
+            "opacity": 80,
+            "image": [
+                "56",
+                0
+            ],
+            "color_ref_image": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "LayerColor: ColorAdapter",
+        "_meta": {
+            "title": "LayerColor: ColorAdapter"
+        }
+    },
+    "59": {
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "61",
+                0
+            ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+            "title": "Save Image"
+        }
+    },
+    "60": {
+        "inputs": {
+            "images": [
+                "55",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "61": {
+        "inputs": {
+            "blend_percentage": 0.2,
+            "image_a": [
+                "57",
+                0
+            ],
+            "image_b": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "Image Blend",
+        "_meta": {
+            "title": "Image Blend"
+        }
+    },
+    "62": {
+        "inputs": {
+            "images": [
+                "57",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "63": {
+        "inputs": {
+            "images": [
+                "56",
                 0
             ]
         },
