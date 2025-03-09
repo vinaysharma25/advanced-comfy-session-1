@@ -1,6 +1,6 @@
 {
-    "last_node_id": 54,
-    "last_link_id": 73,
+    "last_node_id": 62,
+    "last_link_id": 86,
     "nodes": [
         {
             "id": 10,
@@ -67,35 +67,6 @@
             "widgets_values": [
                 "GroundingDINO_SwinT_OGC (694MB)"
             ]
-        },
-        {
-            "id": 13,
-            "type": "PreviewImage",
-            "pos": [
-                946.4061279296875,
-                587.1466064453125
-            ],
-            "size": [
-                210,
-                246
-            ],
-            "flags": {},
-            "order": 17,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "images",
-                    "type": "IMAGE",
-                    "link": 13
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "PreviewImage"
-            },
-            "widgets_values": []
         },
         {
             "id": 15,
@@ -593,66 +564,6 @@
                 "Node name for S&R": "InvertMask (segment anything)"
             },
             "widgets_values": []
-        },
-        {
-            "id": 12,
-            "type": "GroundingDinoSAMSegment (segment anything)",
-            "pos": [
-                370.6745300292969,
-                700.6910400390625
-            ],
-            "size": [
-                529.199951171875,
-                122
-            ],
-            "flags": {},
-            "order": 13,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "sam_model",
-                    "type": "SAM_MODEL",
-                    "link": 10
-                },
-                {
-                    "name": "grounding_dino_model",
-                    "type": "GROUNDING_DINO_MODEL",
-                    "link": 11
-                },
-                {
-                    "name": "image",
-                    "type": "IMAGE",
-                    "link": 12
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "links": [
-                        13
-                    ],
-                    "slot_index": 0
-                },
-                {
-                    "name": "MASK",
-                    "type": "MASK",
-                    "links": [
-                        14,
-                        41
-                    ],
-                    "slot_index": 1
-                }
-            ],
-            "properties": {
-                "aux_id": "storyicon/comfyui_segment_anything",
-                "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
-                "Node name for S&R": "GroundingDinoSAMSegment (segment anything)"
-            },
-            "widgets_values": [
-                "object",
-                0.3
-            ]
         },
         {
             "id": 25,
@@ -1532,66 +1443,11 @@
             "widgets_values": []
         },
         {
-            "id": 29,
-            "type": "ImageCompositeMasked",
-            "pos": [
-                1972.7008056640625,
-                1101.7259521484375
-            ],
-            "size": [
-                315,
-                146
-            ],
-            "flags": {},
-            "order": 29,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "destination",
-                    "type": "IMAGE",
-                    "link": 37
-                },
-                {
-                    "name": "source",
-                    "type": "IMAGE",
-                    "link": 38
-                },
-                {
-                    "name": "mask",
-                    "type": "MASK",
-                    "shape": 7,
-                    "link": 41
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "links": [
-                        40,
-                        57,
-                        69
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "ImageCompositeMasked"
-            },
-            "widgets_values": [
-                0,
-                0,
-                false
-            ]
-        },
-        {
             "id": 53,
             "type": "PreviewImage",
             "pos": [
-                4518.45654296875,
-                1372.38427734375
+                2256.073974609375,
+                2012.323486328125
             ],
             "size": [
                 210,
@@ -1619,8 +1475,8 @@
             "id": 54,
             "type": "PreviewImage",
             "pos": [
-                4220.287109375,
-                1368.0223388671875
+                1957.90380859375,
+                2007.9613037109375
             ],
             "size": [
                 210,
@@ -1645,65 +1501,11 @@
             "widgets_values": []
         },
         {
-            "id": 50,
-            "type": "LayerColor: AutoAdjustV2",
-            "pos": [
-                4791.62158203125,
-                1143.6014404296875
-            ],
-            "size": [
-                315,
-                246
-            ],
-            "flags": {},
-            "order": 39,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "image",
-                    "type": "IMAGE",
-                    "link": 70
-                },
-                {
-                    "name": "mask",
-                    "type": "MASK",
-                    "shape": 7,
-                    "link": null
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "image",
-                    "type": "IMAGE",
-                    "links": [
-                        71
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "aux_id": "chflame163/ComfyUI_LayerStyle",
-                "ver": "7b326d13e43fc4022cd80e472c7af67027409b1e",
-                "Node name for S&R": "LayerColor: AutoAdjustV2"
-            },
-            "widgets_values": [
-                100,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                "RGB"
-            ],
-            "color": "rgba(27, 89, 123, 0.7)"
-        },
-        {
             "id": 48,
             "type": "Color Blend",
             "pos": [
-                4210.873046875,
-                1183.9332275390625
+                1948.489501953125,
+                1823.8726806640625
             ],
             "size": [
                 220.74229431152344,
@@ -1748,8 +1550,8 @@
             "id": 51,
             "type": "Image Blend",
             "pos": [
-                4502.24169921875,
-                1186.4072265625
+                2239.859130859375,
+                1826.3466796875
             ],
             "size": [
                 222.56114196777344,
@@ -1794,8 +1596,8 @@
             "id": 52,
             "type": "PreviewImage",
             "pos": [
-                4803.892578125,
-                1442.5848388671875
+                2541.5107421875,
+                2082.524658203125
             ],
             "size": [
                 210,
@@ -1818,6 +1620,517 @@
                 "Node name for S&R": "PreviewImage"
             },
             "widgets_values": []
+        },
+        {
+            "id": 13,
+            "type": "PreviewImage",
+            "pos": [
+                1032.5469970703125,
+                574.5037231445312
+            ],
+            "size": [
+                210,
+                246
+            ],
+            "flags": {},
+            "order": 17,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 13
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 12,
+            "type": "GroundingDinoSAMSegment (segment anything)",
+            "pos": [
+                370.6745300292969,
+                700.6910400390625
+            ],
+            "size": [
+                529.199951171875,
+                122
+            ],
+            "flags": {},
+            "order": 13,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "sam_model",
+                    "type": "SAM_MODEL",
+                    "link": 10
+                },
+                {
+                    "name": "grounding_dino_model",
+                    "type": "GROUNDING_DINO_MODEL",
+                    "link": 11
+                },
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 12
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": [
+                        14,
+                        41,
+                        74
+                    ],
+                    "slot_index": 1
+                }
+            ],
+            "properties": {
+                "aux_id": "storyicon/comfyui_segment_anything",
+                "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
+                "Node name for S&R": "GroundingDinoSAMSegment (segment anything)"
+            },
+            "widgets_values": [
+                "object",
+                0.3
+            ]
+        },
+        {
+            "id": 50,
+            "type": "LayerColor: AutoAdjustV2",
+            "pos": [
+                2529.23974609375,
+                1783.5408935546875
+            ],
+            "size": [
+                315,
+                246
+            ],
+            "flags": {},
+            "order": 39,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 70
+                },
+                {
+                    "name": "mask",
+                    "type": "MASK",
+                    "shape": 7,
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "links": [
+                        71,
+                        75,
+                        78
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "chflame163/ComfyUI_LayerStyle",
+                "ver": "7b326d13e43fc4022cd80e472c7af67027409b1e",
+                "Node name for S&R": "LayerColor: AutoAdjustV2"
+            },
+            "widgets_values": [
+                100,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                "RGB"
+            ],
+            "color": "rgba(27, 89, 123, 0.7)"
+        },
+        {
+            "id": 29,
+            "type": "ImageCompositeMasked",
+            "pos": [
+                1972.7008056640625,
+                1101.7259521484375
+            ],
+            "size": [
+                315,
+                146
+            ],
+            "flags": {},
+            "order": 29,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "destination",
+                    "type": "IMAGE",
+                    "link": 37
+                },
+                {
+                    "name": "source",
+                    "type": "IMAGE",
+                    "link": 38
+                },
+                {
+                    "name": "mask",
+                    "type": "MASK",
+                    "shape": 7,
+                    "link": 41
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        40,
+                        57,
+                        69,
+                        76,
+                        80
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "ImageCompositeMasked"
+            },
+            "widgets_values": [
+                0,
+                0,
+                false
+            ]
+        },
+        {
+            "id": 58,
+            "type": "Image Blend",
+            "pos": [
+                4192.421875,
+                1803.6907958984375
+            ],
+            "size": [
+                315,
+                78
+            ],
+            "flags": {},
+            "order": 47,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image_a",
+                    "type": "IMAGE",
+                    "link": 81
+                },
+                {
+                    "name": "image_b",
+                    "type": "IMAGE",
+                    "link": 82
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "links": [
+                        83
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "WASasquatch/was-node-suite-comfyui",
+                "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
+                "Node name for S&R": "Image Blend"
+            },
+            "widgets_values": [
+                0.2
+            ]
+        },
+        {
+            "id": 59,
+            "type": "PreviewImage",
+            "pos": [
+                4238.38623046875,
+                1981.192626953125
+            ],
+            "size": [
+                210,
+                26
+            ],
+            "flags": {},
+            "order": 49,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 83
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            }
+        },
+        {
+            "id": 57,
+            "type": "LayerColor: ColorAdapter",
+            "pos": [
+                3829.5556640625,
+                1803.908203125
+            ],
+            "size": [
+                315,
+                78
+            ],
+            "flags": {},
+            "order": 45,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 79
+                },
+                {
+                    "name": "color_ref_image",
+                    "type": "IMAGE",
+                    "link": 80
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "links": [
+                        81,
+                        84
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "chflame163/ComfyUI_LayerStyle",
+                "ver": "7b326d13e43fc4022cd80e472c7af67027409b1e",
+                "Node name for S&R": "LayerColor: ColorAdapter"
+            },
+            "widgets_values": [
+                80
+            ],
+            "color": "rgba(27, 89, 123, 0.7)"
+        },
+        {
+            "id": 60,
+            "type": "PreviewImage",
+            "pos": [
+                3860.350341796875,
+                1970.42822265625
+            ],
+            "size": [
+                210,
+                26
+            ],
+            "flags": {},
+            "order": 48,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 84
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            }
+        },
+        {
+            "id": 56,
+            "type": "RestoreDetail",
+            "pos": [
+                3449.20068359375,
+                1765.666748046875
+            ],
+            "size": [
+                315,
+                150
+            ],
+            "flags": {},
+            "order": 43,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 78
+                },
+                {
+                    "name": "detail",
+                    "type": "IMAGE",
+                    "link": 77
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        79,
+                        85
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "spacepxl/ComfyUI-Image-Filters",
+                "ver": "7ba4e444f0416f5cf7ee55d56b1504dea2404ac7",
+                "Node name for S&R": "RestoreDetail"
+            },
+            "widgets_values": [
+                "add",
+                "blur",
+                5,
+                1
+            ]
+        },
+        {
+            "id": 61,
+            "type": "PreviewImage",
+            "pos": [
+                3487.81103515625,
+                1989.2794189453125
+            ],
+            "size": [
+                210,
+                26
+            ],
+            "flags": {},
+            "order": 46,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 85
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            }
+        },
+        {
+            "id": 55,
+            "type": "DetailTransfer",
+            "pos": [
+                3035.11767578125,
+                1744.6300048828125
+            ],
+            "size": [
+                315,
+                146
+            ],
+            "flags": {},
+            "order": 42,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "target",
+                    "type": "IMAGE",
+                    "link": 75
+                },
+                {
+                    "name": "source",
+                    "type": "IMAGE",
+                    "link": 76
+                },
+                {
+                    "name": "mask",
+                    "type": "MASK",
+                    "shape": 7,
+                    "link": 74
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        77,
+                        82,
+                        86
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "kijai/ComfyUI-IC-Light",
+                "ver": "0208191a9bd2a214167c8a52237ecadd1fa0220c",
+                "Node name for S&R": "DetailTransfer"
+            },
+            "widgets_values": [
+                "soft_light",
+                5,
+                1
+            ]
+        },
+        {
+            "id": 62,
+            "type": "PreviewImage",
+            "pos": [
+                3045.10107421875,
+                1960.581787109375
+            ],
+            "size": [
+                210,
+                26
+            ],
+            "flags": {},
+            "order": 44,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 86
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            }
         }
     ],
     "links": [
@@ -2316,6 +2629,110 @@
             54,
             0,
             "IMAGE"
+        ],
+        [
+            74,
+            12,
+            1,
+            55,
+            2,
+            "MASK"
+        ],
+        [
+            75,
+            50,
+            0,
+            55,
+            0,
+            "IMAGE"
+        ],
+        [
+            76,
+            29,
+            0,
+            55,
+            1,
+            "IMAGE"
+        ],
+        [
+            77,
+            55,
+            0,
+            56,
+            1,
+            "IMAGE"
+        ],
+        [
+            78,
+            50,
+            0,
+            56,
+            0,
+            "IMAGE"
+        ],
+        [
+            79,
+            56,
+            0,
+            57,
+            0,
+            "IMAGE"
+        ],
+        [
+            80,
+            29,
+            0,
+            57,
+            1,
+            "IMAGE"
+        ],
+        [
+            81,
+            57,
+            0,
+            58,
+            0,
+            "IMAGE"
+        ],
+        [
+            82,
+            55,
+            0,
+            58,
+            1,
+            "IMAGE"
+        ],
+        [
+            83,
+            58,
+            0,
+            59,
+            0,
+            "IMAGE"
+        ],
+        [
+            84,
+            57,
+            0,
+            60,
+            0,
+            "IMAGE"
+        ],
+        [
+            85,
+            56,
+            0,
+            61,
+            0,
+            "IMAGE"
+        ],
+        [
+            86,
+            55,
+            0,
+            62,
+            0,
+            "IMAGE"
         ]
     ],
     "groups": [
@@ -2427,8 +2844,8 @@
             "id": 9,
             "title": "Image and Color Blending",
             "bounding": [
-                4149.1826171875,
-                1049.0985107421875,
+                1886.798828125,
+                1689.0379638671875,
                 1053.74560546875,
                 665.5419921875
             ],
@@ -2440,10 +2857,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.6830134553650705,
+            "scale": 0.5131581182307071,
             "offset": [
-                -3006.231793146193,
-                -830.6821272189295
+                -2468.3067511325467,
+                -1026.897619482284
             ]
         }
     },
