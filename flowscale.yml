@@ -87,7 +87,7 @@ workflows:
   - id: krht6t1ylzh
     name: product_photography_2_api.json
     file: inpainting_and_outpainting/product_photography_2_api.json
-    version: 1
+    version: 2
     description: ''
     inputs: []
     outputs: []
@@ -136,4 +136,4 @@ normal_workflows:
   - id: eeoibme22rl
     name: product_photography_2.json
     file: inpainting_and_outpainting/product_photography_2.json
-    version: 1
+    version: 2
