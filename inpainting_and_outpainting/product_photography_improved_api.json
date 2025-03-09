@@ -133,7 +133,7 @@
     },
     "20": {
         "inputs": {
-            "seed": 239840750919883,
+            "seed": 654689829781574,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -226,7 +226,7 @@
     },
     "25": {
         "inputs": {
-            "image": "L1_ebae23ff-f31d-459a-a093-9104c4e4def8.webp",
+            "image": "delsey-chatelet-air-2.0-00167681015-01_1800x1800.webp",
             "upload": "image"
         },
         "class_type": "LoadImage",
@@ -277,7 +277,7 @@
         "inputs": {
             "x": 0,
             "y": 0,
-            "resize_source": false,
+            "resize_source": true,
             "destination": [
                 "18",
                 0
@@ -369,7 +369,7 @@
     },
     "35": {
         "inputs": {
-            "seed": 963132844518340,
+            "seed": 786506531041769,
             "steps": 40,
             "cfg": 2,
             "sampler_name": "dpmpp_2m_sde",
