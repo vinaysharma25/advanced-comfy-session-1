@@ -154,5 +154,26 @@
     "pip": [],
     "apt": [],
     "cached": "False"
+  },
+  {
+    "name": "ComfyUI-IC-Light",
+    "url": "https://github.com/kijai/ComfyUI-IC-Light",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "kijai",
+      "title": "ComfyUI-IC-Light",
+      "id": "ic-light-kijai",
+      "reference": "https://github.com/kijai/ComfyUI-IC-Light",
+      "files": [
+        "https://github.com/kijai/ComfyUI-IC-Light"
+      ],
+      "install_type": "git-clone",
+      "description": "ComfyUI native nodes for IC-Light"
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False"
   }
 ]
