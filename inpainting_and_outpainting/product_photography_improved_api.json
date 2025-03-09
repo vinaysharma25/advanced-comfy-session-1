@@ -133,7 +133,7 @@
     },
     "20": {
         "inputs": {
-            "seed": 945764583838439,
+            "seed": 892118255492266,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -369,7 +369,7 @@
     },
     "35": {
         "inputs": {
-            "seed": 829811076128384,
+            "seed": 793791463149055,
             "steps": 40,
             "cfg": 2,
             "sampler_name": "dpmpp_2m_sde",
@@ -547,6 +547,96 @@
         "class_type": "Text Multiline",
         "_meta": {
             "title": "Positive Prompt"
+        }
+    },
+    "48": {
+        "inputs": {
+            "mode": "Luminosity",
+            "blend_image": [
+                "45",
+                0
+            ],
+            "base_image": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "Color Blend",
+        "_meta": {
+            "title": "Color Blend"
+        }
+    },
+    "50": {
+        "inputs": {
+            "strength": 100,
+            "brightness": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "red": 0,
+            "green": 0,
+            "blue": 0,
+            "mode": "RGB",
+            "image": [
+                "51",
+                0
+            ]
+        },
+        "class_type": "LayerColor: AutoAdjustV2",
+        "_meta": {
+            "title": "LayerColor: AutoAdjust V2"
+        }
+    },
+    "51": {
+        "inputs": {
+            "blend_percentage": 0.2,
+            "image_a": [
+                "48",
+                0
+            ],
+            "image_b": [
+                "45",
+                0
+            ]
+        },
+        "class_type": "Image Blend",
+        "_meta": {
+            "title": "Image Blend"
+        }
+    },
+    "52": {
+        "inputs": {
+            "images": [
+                "50",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "53": {
+        "inputs": {
+            "images": [
+                "51",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "54": {
+        "inputs": {
+            "images": [
+                "48",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
         }
     }
 }
