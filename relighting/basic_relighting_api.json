@@ -1,0 +1,199 @@
+{
+    "2": {
+        "inputs": {
+            "ckpt_name": "epicrealism_naturalSinRC1VAE.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+            "title": "Load Checkpoint"
+        }
+    },
+    "4": {
+        "inputs": {
+            "text": "spotlight",
+            "clip": [
+                "2",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "5": {
+        "inputs": {
+            "text": "bad quality",
+            "clip": [
+                "2",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "7": {
+        "inputs": {
+            "samples": [
+                "19",
+                0
+            ],
+            "vae": [
+                "2",
+                2
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "9": {
+        "inputs": {
+            "image": "clipspace/clipspace-mask-1454066.800000012.png [input]",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "19": {
+        "inputs": {
+            "seed": 100361857014338,
+            "steps": 25,
+            "cfg": 2.05,
+            "sampler_name": "euler",
+            "scheduler": "ddim_uniform",
+            "denoise": 0.9,
+            "model": [
+                "37",
+                0
+            ],
+            "positive": [
+                "44",
+                0
+            ],
+            "negative": [
+                "44",
+                1
+            ],
+            "latent_image": [
+                "20",
+                0
+            ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+            "title": "KSampler"
+        }
+    },
+    "20": {
+        "inputs": {
+            "pixels": [
+                "35",
+                0
+            ],
+            "vae": [
+                "2",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "35": {
+        "inputs": {
+            "mask": [
+                "9",
+                1
+            ]
+        },
+        "class_type": "MaskToImage",
+        "_meta": {
+            "title": "Convert Mask to Image"
+        }
+    },
+    "36": {
+        "inputs": {
+            "images": [
+                "7",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "37": {
+        "inputs": {
+            "model_path": "IC-Light/iclight_sd15_fc.safetensors",
+            "model": [
+                "2",
+                0
+            ]
+        },
+        "class_type": "LoadAndApplyICLightUnet",
+        "_meta": {
+            "title": "Load And Apply IC-Light"
+        }
+    },
+    "41": {
+        "inputs": {
+            "images": [
+                "35",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "44": {
+        "inputs": {
+            "multiplier": 0.18215,
+            "positive": [
+                "4",
+                0
+            ],
+            "negative": [
+                "5",
+                0
+            ],
+            "vae": [
+                "2",
+                2
+            ],
+            "foreground": [
+                "45",
+                0
+            ]
+        },
+        "class_type": "ICLightConditioning",
+        "_meta": {
+            "title": "IC-Light Conditioning"
+        }
+    },
+    "45": {
+        "inputs": {
+            "pixels": [
+                "9",
+                0
+            ],
+            "vae": [
+                "2",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    }
+}
