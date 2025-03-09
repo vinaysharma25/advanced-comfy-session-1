@@ -1,0 +1,643 @@
+{
+    "10": {
+        "inputs": {
+            "model_name": "sam_vit_h (2.56GB)"
+        },
+        "class_type": "SAMModelLoader (segment anything)",
+        "_meta": {
+            "title": "SAMModelLoader (segment anything)"
+        }
+    },
+    "11": {
+        "inputs": {
+            "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+        },
+        "class_type": "GroundingDinoModelLoader (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoModelLoader (segment anything)"
+        }
+    },
+    "12": {
+        "inputs": {
+            "prompt": "object",
+            "threshold": 0.3,
+            "sam_model": [
+                "10",
+                0
+            ],
+            "grounding_dino_model": [
+                "11",
+                0
+            ],
+            "image": [
+                "24",
+                0
+            ]
+        },
+        "class_type": "GroundingDinoSAMSegment (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoSAMSegment (segment anything)"
+        }
+    },
+    "13": {
+        "inputs": {
+            "images": [
+                "12",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "14": {
+        "inputs": {
+            "mask": [
+                "12",
+                1
+            ]
+        },
+        "class_type": "InvertMask (segment anything)",
+        "_meta": {
+            "title": "InvertMask (segment anything)"
+        }
+    },
+    "15": {
+        "inputs": {
+            "images": [
+                "28",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "16": {
+        "inputs": {
+            "strength": 1,
+            "start_percent": 0,
+            "end_percent": 1,
+            "positive": [
+                "26",
+                0
+            ],
+            "negative": [
+                "21",
+                0
+            ],
+            "control_net": [
+                "27",
+                0
+            ],
+            "image": [
+                "28",
+                0
+            ],
+            "vae": [
+                "17",
+                2
+            ]
+        },
+        "class_type": "ControlNetApplyAdvanced",
+        "_meta": {
+            "title": "Apply ControlNet"
+        }
+    },
+    "17": {
+        "inputs": {
+            "ckpt_name": "epicrealism_naturalSinRC1VAE.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+            "title": "Load Checkpoint"
+        }
+    },
+    "18": {
+        "inputs": {
+            "samples": [
+                "20",
+                0
+            ],
+            "vae": [
+                "17",
+                2
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "19": {
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "18",
+                0
+            ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+            "title": "Save Image"
+        }
+    },
+    "20": {
+        "inputs": {
+            "seed": 913111357113647,
+            "steps": 20,
+            "cfg": 8,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1,
+            "model": [
+                "17",
+                0
+            ],
+            "positive": [
+                "16",
+                0
+            ],
+            "negative": [
+                "16",
+                1
+            ],
+            "latent_image": [
+                "22",
+                0
+            ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+            "title": "KSampler"
+        }
+    },
+    "21": {
+        "inputs": {
+            "text": "nude, naked, nsfw",
+            "clip": [
+                "17",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "22": {
+        "inputs": {
+            "samples": [
+                "23",
+                0
+            ],
+            "mask": [
+                "14",
+                0
+            ]
+        },
+        "class_type": "SetLatentNoiseMask",
+        "_meta": {
+            "title": "Set Latent Noise Mask"
+        }
+    },
+    "23": {
+        "inputs": {
+            "pixels": [
+                "24",
+                0
+            ],
+            "vae": [
+                "17",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "24": {
+        "inputs": {
+            "width": 1024,
+            "height": 1024,
+            "interpolation": "nearest",
+            "method": "keep proportion",
+            "condition": "always",
+            "multiple_of": 0,
+            "image": [
+                "25",
+                0
+            ]
+        },
+        "class_type": "ImageResize+",
+        "_meta": {
+            "title": "🔧 Image Resize"
+        }
+    },
+    "25": {
+        "inputs": {
+            "image": "delsey-chatelet-air-2.0-00167681015-01_1800x1800 (1).webp",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "26": {
+        "inputs": {
+            "text": [
+                "44",
+                0
+            ],
+            "clip": [
+                "17",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "27": {
+        "inputs": {
+            "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+        },
+        "class_type": "ControlNetLoader",
+        "_meta": {
+            "title": "Load ControlNet Model"
+        }
+    },
+    "28": {
+        "inputs": {
+            "coarse": "disable",
+            "resolution": 512,
+            "image": [
+                "24",
+                0
+            ]
+        },
+        "class_type": "LineArtPreprocessor",
+        "_meta": {
+            "title": "Realistic Lineart"
+        }
+    },
+    "29": {
+        "inputs": {
+            "x": 0,
+            "y": 0,
+            "resize_source": true,
+            "destination": [
+                "18",
+                0
+            ],
+            "source": [
+                "24",
+                0
+            ],
+            "mask": [
+                "12",
+                1
+            ]
+        },
+        "class_type": "ImageCompositeMasked",
+        "_meta": {
+            "title": "ImageCompositeMasked"
+        }
+    },
+    "30": {
+        "inputs": {
+            "images": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "31": {
+        "inputs": {
+            "channel": "red",
+            "image": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "Image Select Channel",
+        "_meta": {
+            "title": "Image Select Channel"
+        }
+    },
+    "32": {
+        "inputs": {
+            "blur_radius": 30,
+            "sigma": 1,
+            "image": [
+                "31",
+                0
+            ]
+        },
+        "class_type": "ImageBlur",
+        "_meta": {
+            "title": "Image Blur"
+        }
+    },
+    "33": {
+        "inputs": {
+            "brightness": 1.2,
+            "contrast": 1,
+            "saturation": 1,
+            "image": [
+                "32",
+                0
+            ]
+        },
+        "class_type": "LayerColor: Brightness & Contrast",
+        "_meta": {
+            "title": "LayerColor: Brightness & Contrast"
+        }
+    },
+    "34": {
+        "inputs": {
+            "images": [
+                "33",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "35": {
+        "inputs": {
+            "pixels": [
+                "33",
+                0
+            ],
+            "vae": [
+                "17",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "37": {
+        "inputs": {
+            "text": [
+                "44",
+                0
+            ],
+            "clip": [
+                "38",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "38": {
+        "inputs": {
+            "ckpt_name": "epicrealism_naturalSinRC1VAE.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+            "title": "Load Checkpoint"
+        }
+    },
+    "39": {
+        "inputs": {
+            "text": "",
+            "clip": [
+                "38",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "40": {
+        "inputs": {
+            "seed": 422511302693639,
+            "steps": 40,
+            "cfg": 2,
+            "sampler_name": "dpmpp_2m_sde",
+            "scheduler": "karras",
+            "denoise": 1,
+            "model": [
+                "48",
+                0
+            ],
+            "positive": [
+                "42",
+                0
+            ],
+            "negative": [
+                "42",
+                1
+            ],
+            "latent_image": [
+                "35",
+                0
+            ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+            "title": "KSampler"
+        }
+    },
+    "41": {
+        "inputs": {
+            "samples": [
+                "40",
+                0
+            ],
+            "vae": [
+                "38",
+                2
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "42": {
+        "inputs": {
+            "multiplier": 0.18215,
+            "positive": [
+                "37",
+                0
+            ],
+            "negative": [
+                "39",
+                0
+            ],
+            "vae": [
+                "17",
+                2
+            ],
+            "foreground": [
+                "43",
+                0
+            ]
+        },
+        "class_type": "ICLightConditioning",
+        "_meta": {
+            "title": "IC-Light Conditioning"
+        }
+    },
+    "43": {
+        "inputs": {
+            "pixels": [
+                "29",
+                0
+            ],
+            "vae": [
+                "17",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "44": {
+        "inputs": {
+            "text": "luggage, placed in a forest, green forest background"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+            "title": "Text Multiline"
+        }
+    },
+    "47": {
+        "inputs": {
+            "images": [
+                "41",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "48": {
+        "inputs": {
+            "model_path": "IC-Light/iclight_sd15_fc.safetensors",
+            "model": [
+                "38",
+                0
+            ]
+        },
+        "class_type": "LoadAndApplyICLightUnet",
+        "_meta": {
+            "title": "Load And Apply IC-Light"
+        }
+    },
+    "49": {
+        "inputs": {
+            "mode": "Luminosity",
+            "blend_image": [
+                "41",
+                0
+            ],
+            "base_image": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "Color Blend",
+        "_meta": {
+            "title": "Color Blend"
+        }
+    },
+    "50": {
+        "inputs": {
+            "blend_percentage": 0.2,
+            "image_a": [
+                "49",
+                0
+            ],
+            "image_b": [
+                "41",
+                0
+            ]
+        },
+        "class_type": "Image Blend",
+        "_meta": {
+            "title": "Image Blend"
+        }
+    },
+    "51": {
+        "inputs": {
+            "strength": 100,
+            "brightness": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "red": 0,
+            "green": 0,
+            "blue": 0,
+            "mode": "RGB",
+            "image": [
+                "50",
+                0
+            ]
+        },
+        "class_type": "LayerColor: AutoAdjustV2",
+        "_meta": {
+            "title": "LayerColor: AutoAdjust V2"
+        }
+    },
+    "52": {
+        "inputs": {
+            "images": [
+                "49",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "53": {
+        "inputs": {
+            "images": [
+                "50",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "54": {
+        "inputs": {
+            "images": [
+                "51",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    }
+}
