@@ -76,6 +76,14 @@ workflows:
     inputs: []
     outputs: []
     skip_preprocess: true
+  - id: 56exyf4nvjg
+    name: basic_relighting_api.json
+    file: relighting/basic_relighting_api.json
+    version: 0
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -112,4 +120,8 @@ normal_workflows:
   - id: tz7od90a4r
     name: image_composite_masking.json
     file: basics/image_composite_masking.json
+    version: 0
+  - id: 6in8kl11ite
+    name: basic_relighting.json
+    file: relighting/basic_relighting.json
     version: 0
