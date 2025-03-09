@@ -63,7 +63,7 @@ workflows:
   - id: yb9cayzg3pd
     name: product_photography_improved_api.json
     file: inpainting_and_outpainting/product_photography_improved_api.json
-    version: 7
+    version: 8
     description: ''
     inputs: []
     outputs: []
@@ -108,7 +108,7 @@ normal_workflows:
   - id: qgdifbpgqnq
     name: product_photography_improved.json
     file: inpainting_and_outpainting/product_photography_improved.json
-    version: 7
+    version: 8
   - id: tz7od90a4r
     name: image_composite_masking.json
     file: basics/image_composite_masking.json
