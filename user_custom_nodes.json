@@ -222,5 +222,26 @@
     "pip": [],
     "apt": [],
     "cached": "False"
+  },
+  {
+    "name": "Character Face Swap",
+    "url": "https://github.com/ArtBot2023/CharacterFaceSwap",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "ArtBot2023",
+      "title": "Character Face Swap",
+      "id": "char-faceswap",
+      "reference": "https://github.com/ArtBot2023/CharacterFaceSwap",
+      "files": [
+        "https://github.com/ArtBot2023/CharacterFaceSwap"
+      ],
+      "install_type": "git-clone",
+      "description": "Character face swap with LoRA and embeddings."
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False"
   }
 ]
