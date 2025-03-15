@@ -27,9 +27,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "storyicon/comfyui_segment_anything",
+                "cnr_id": "comfyui_segment_anything",
                 "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
-                "Node name for S&R": "SAMModelLoader (segment anything)"
+                "Node name for S&R": "SAMModelLoader (segment anything)",
+                "aux_id": "storyicon/comfyui_segment_anything"
             },
             "widgets_values": [
                 "sam_vit_h (2.56GB)"
@@ -60,9 +61,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "storyicon/comfyui_segment_anything",
+                "cnr_id": "comfyui_segment_anything",
                 "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
-                "Node name for S&R": "GroundingDinoModelLoader (segment anything)"
+                "Node name for S&R": "GroundingDinoModelLoader (segment anything)",
+                "aux_id": "storyicon/comfyui_segment_anything"
             },
             "widgets_values": [
                 "GroundingDINO_SwinT_OGC (694MB)"
@@ -94,7 +96,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 13,
@@ -272,7 +275,7 @@
                 "Node name for S&R": "KSampler"
             },
             "widgets_values": [
-                654689829781574,
+                336009918199243,
                 "randomize",
                 20,
                 8,
@@ -361,7 +364,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "SetLatentNoiseMask"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 18,
@@ -403,7 +407,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "VAEEncode"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 21,
@@ -446,7 +451,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "VAEDecode"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 22,
@@ -480,10 +486,12 @@
                 }
             ],
             "properties": {
-                "aux_id": "storyicon/comfyui_segment_anything",
+                "cnr_id": "comfyui_segment_anything",
                 "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
-                "Node name for S&R": "InvertMask (segment anything)"
-            }
+                "Node name for S&R": "InvertMask (segment anything)",
+                "aux_id": "storyicon/comfyui_segment_anything"
+            },
+            "widgets_values": []
         },
         {
             "id": 23,
@@ -511,7 +519,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 24,
@@ -539,7 +548,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 25,
@@ -553,7 +563,7 @@
                 164.31304931640625
             ],
             "flags": {},
-            "order": 11,
+            "order": 10,
             "mode": 0,
             "inputs": [
                 {
@@ -587,65 +597,6 @@
             },
             "widgets_values": [
                 "luggage, kept in forest, trees background"
-            ]
-        },
-        {
-            "id": 27,
-            "type": "ImageResize+",
-            "pos": [
-                1444.7183837890625,
-                1841.6236572265625
-            ],
-            "size": [
-                315,
-                218
-            ],
-            "flags": {},
-            "order": 10,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "image",
-                    "type": "IMAGE",
-                    "link": 33
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "links": [
-                        23,
-                        48,
-                        67,
-                        83,
-                        85
-                    ],
-                    "slot_index": 0
-                },
-                {
-                    "name": "width",
-                    "type": "INT",
-                    "links": null
-                },
-                {
-                    "name": "height",
-                    "type": "INT",
-                    "links": null
-                }
-            ],
-            "properties": {
-                "aux_id": "cubiq/ComfyUI_essentials",
-                "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
-                "Node name for S&R": "ImageResize+"
-            },
-            "widgets_values": [
-                1024,
-                1024,
-                "nearest",
-                "keep proportion",
-                "always",
-                0
             ]
         },
         {
@@ -742,7 +693,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "VAEEncode"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 30,
@@ -758,7 +710,7 @@
             "flags": {
                 "collapsed": false
             },
-            "order": 12,
+            "order": 11,
             "mode": 0,
             "inputs": [
                 {
@@ -902,9 +854,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "kijai/ComfyUI-IC-Light",
+                "cnr_id": "comfyui-ic-light",
                 "ver": "0208191a9bd2a214167c8a52237ecadd1fa0220c",
-                "Node name for S&R": "ICLightConditioning"
+                "Node name for S&R": "ICLightConditioning",
+                "aux_id": "kijai/ComfyUI-IC-Light"
             },
             "widgets_values": [
                 0.18
@@ -942,9 +895,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "kijai/ComfyUI-IC-Light",
+                "cnr_id": "comfyui-ic-light",
                 "ver": "0208191a9bd2a214167c8a52237ecadd1fa0220c",
-                "Node name for S&R": "LoadAndApplyICLightUnet"
+                "Node name for S&R": "LoadAndApplyICLightUnet",
+                "aux_id": "kijai/ComfyUI-IC-Light"
             },
             "widgets_values": [
                 "IC-Light/iclight_sd15_fc.safetensors"
@@ -1024,9 +978,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "chflame163/ComfyUI_LayerStyle",
+                "cnr_id": "comfyui_layerstyle",
                 "ver": "7b326d13e43fc4022cd80e472c7af67027409b1e",
-                "Node name for S&R": "LayerColor: Brightness & Contrast"
+                "Node name for S&R": "LayerColor: Brightness & Contrast",
+                "aux_id": "chflame163/ComfyUI_LayerStyle"
             },
             "widgets_values": [
                 1.2,
@@ -1075,7 +1030,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "VAEEncode"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 37,
@@ -1109,9 +1065,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "WASasquatch/was-node-suite-comfyui",
+                "cnr_id": "was-node-suite-comfyui",
                 "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
-                "Node name for S&R": "Image Select Channel"
+                "Node name for S&R": "Image Select Channel",
+                "aux_id": "WASasquatch/was-node-suite-comfyui"
             },
             "widgets_values": [
                 "red"
@@ -1143,7 +1100,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 39,
@@ -1171,7 +1129,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 40,
@@ -1225,7 +1184,7 @@
                 "Node name for S&R": "KSampler"
             },
             "widgets_values": [
-                786506531041769,
+                145770813750588,
                 "randomize",
                 40,
                 2,
@@ -1276,7 +1235,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "VAEDecode"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 42,
@@ -1304,7 +1264,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 43,
@@ -1332,7 +1293,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 44,
@@ -1372,9 +1334,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "ArtBot2023/CharacterFaceSwap",
+                "cnr_id": "CharacterFaceSwap",
                 "ver": "f395496e5bf50d88579934ec2f776cd81866e8e9",
-                "Node name for S&R": "Color Blend"
+                "Node name for S&R": "Color Blend",
+                "aux_id": "ArtBot2023/CharacterFaceSwap"
             },
             "widgets_values": [
                 "Luminosity"
@@ -1418,9 +1381,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "WASasquatch/was-node-suite-comfyui",
+                "cnr_id": "was-node-suite-comfyui",
                 "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
-                "Node name for S&R": "Image Blend"
+                "Node name for S&R": "Image Blend",
+                "aux_id": "WASasquatch/was-node-suite-comfyui"
             },
             "widgets_values": [
                 0.2
@@ -1452,7 +1416,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 47,
@@ -1480,7 +1445,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 49,
@@ -1520,9 +1486,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "chflame163/ComfyUI_LayerStyle",
+                "cnr_id": "comfyui_layerstyle",
                 "ver": "7b326d13e43fc4022cd80e472c7af67027409b1e",
-                "Node name for S&R": "LayerColor: ColorAdapter"
+                "Node name for S&R": "LayerColor: ColorAdapter",
+                "aux_id": "chflame163/ComfyUI_LayerStyle"
             },
             "widgets_values": [
                 80
@@ -1555,7 +1522,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 51,
@@ -1595,9 +1563,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "spacepxl/ComfyUI-Image-Filters",
+                "cnr_id": "ComfyUI-Image-Filters",
                 "ver": "7ba4e444f0416f5cf7ee55d56b1504dea2404ac7",
-                "Node name for S&R": "RestoreDetail"
+                "Node name for S&R": "RestoreDetail",
+                "aux_id": "spacepxl/ComfyUI-Image-Filters"
             },
             "widgets_values": [
                 "add",
@@ -1632,7 +1601,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 53,
@@ -1679,9 +1649,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "kijai/ComfyUI-IC-Light",
+                "cnr_id": "comfyui-ic-light",
                 "ver": "0208191a9bd2a214167c8a52237ecadd1fa0220c",
-                "Node name for S&R": "DetailTransfer"
+                "Node name for S&R": "DetailTransfer",
+                "aux_id": "kijai/ComfyUI-IC-Light"
             },
             "widgets_values": [
                 "soft_light",
@@ -1715,7 +1686,8 @@
                 "cnr_id": "comfy-core",
                 "ver": "0.3.15",
                 "Node name for S&R": "PreviewImage"
-            }
+            },
+            "widgets_values": []
         },
         {
             "id": 55,
@@ -1757,9 +1729,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "chflame163/ComfyUI_LayerStyle",
+                "cnr_id": "comfyui_layerstyle",
                 "ver": "7b326d13e43fc4022cd80e472c7af67027409b1e",
-                "Node name for S&R": "LayerColor: AutoAdjustV2"
+                "Node name for S&R": "LayerColor: AutoAdjustV2",
+                "aux_id": "chflame163/ComfyUI_LayerStyle"
             },
             "widgets_values": [
                 100,
@@ -1840,9 +1813,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "WASasquatch/was-node-suite-comfyui",
+                "cnr_id": "was-node-suite-comfyui",
                 "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
-                "Node name for S&R": "Image Blend"
+                "Node name for S&R": "Image Blend",
+                "aux_id": "WASasquatch/was-node-suite-comfyui"
             },
             "widgets_values": [
                 0.2
@@ -1957,9 +1931,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "storyicon/comfyui_segment_anything",
+                "cnr_id": "comfyui_segment_anything",
                 "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
-                "Node name for S&R": "GroundingDinoSAMSegment (segment anything)"
+                "Node name for S&R": "GroundingDinoSAMSegment (segment anything)",
+                "aux_id": "storyicon/comfyui_segment_anything"
             },
             "widgets_values": [
                 "clothes",
@@ -2004,9 +1979,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "Fannovel16/comfyui_controlnet_aux",
+                "cnr_id": "comfyui_controlnet_aux",
                 "ver": "1e9eac6377c882da8bb360c7544607036904362c",
-                "Node name for S&R": "DWPreprocessor"
+                "Node name for S&R": "DWPreprocessor",
+                "aux_id": "Fannovel16/comfyui_controlnet_aux"
             },
             "widgets_values": [
                 "enable",
@@ -2052,6 +2028,43 @@
             ]
         },
         {
+            "id": 26,
+            "type": "Text Multiline",
+            "pos": [
+                1058.886962890625,
+                1425.337646484375
+            ],
+            "size": [
+                335.90704345703125,
+                196.48919677734375
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "STRING",
+                    "type": "STRING",
+                    "links": [
+                        32,
+                        37
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "title": "Positive Prompt",
+            "properties": {
+                "cnr_id": "was-node-suite-comfyui",
+                "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
+                "Node name for S&R": "Text Multiline",
+                "aux_id": "WASasquatch/was-node-suite-comfyui"
+            },
+            "widgets_values": [
+                "british young man, wearing black shirt and grey pants, london street background"
+            ]
+        },
+        {
             "id": 59,
             "type": "LoadImage",
             "pos": [
@@ -2063,7 +2076,7 @@
                 314
             ],
             "flags": {},
-            "order": 5,
+            "order": 6,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -2093,39 +2106,63 @@
             ]
         },
         {
-            "id": 26,
-            "type": "Text Multiline",
+            "id": 27,
+            "type": "ImageResize+",
             "pos": [
-                1058.886962890625,
-                1425.337646484375
+                1444.7183837890625,
+                1841.6236572265625
             ],
             "size": [
-                335.90704345703125,
-                196.48919677734375
+                315,
+                218
             ],
             "flags": {},
-            "order": 6,
+            "order": 12,
             "mode": 0,
-            "inputs": [],
-            "outputs": [
+            "inputs": [
                 {
-                    "name": "STRING",
-                    "type": "STRING",
-                    "links": [
-                        32,
-                        37
-                    ],
-                    "slot_index": 0
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 33
                 }
             ],
-            "title": "Positive Prompt",
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        23,
+                        48,
+                        67,
+                        83,
+                        85
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "width",
+                    "type": "INT",
+                    "links": null
+                },
+                {
+                    "name": "height",
+                    "type": "INT",
+                    "links": null
+                }
+            ],
             "properties": {
-                "aux_id": "WASasquatch/was-node-suite-comfyui",
-                "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
-                "Node name for S&R": "Text Multiline"
+                "cnr_id": "comfyui_essentials",
+                "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+                "Node name for S&R": "ImageResize+",
+                "aux_id": "cubiq/ComfyUI_essentials"
             },
             "widgets_values": [
-                "british young man, wearing black shirt and grey pants, london street background"
+                1024,
+                1024,
+                "nearest",
+                "keep proportion",
+                "always",
+                8
             ]
         }
     ],
@@ -2866,10 +2903,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.620921323059155,
+            "scale": 1.2100000000000002,
             "offset": [
-                -973.8785235747971,
-                -1013.3661043001836
+                -945.0343439492277,
+                -1653.2455518819133
             ]
         }
     },
