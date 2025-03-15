@@ -1,0 +1,773 @@
+{
+    "10": {
+        "inputs": {
+            "model_name": "sam_vit_h (2.56GB)"
+        },
+        "class_type": "SAMModelLoader (segment anything)",
+        "_meta": {
+            "title": "SAMModelLoader (segment anything)"
+        }
+    },
+    "11": {
+        "inputs": {
+            "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+        },
+        "class_type": "GroundingDinoModelLoader (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoModelLoader (segment anything)"
+        }
+    },
+    "12": {
+        "inputs": {
+            "images": [
+                "60",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "13": {
+        "inputs": {
+            "strength": 1,
+            "start_percent": 0,
+            "end_percent": 1,
+            "positive": [
+                "25",
+                0
+            ],
+            "negative": [
+                "16",
+                0
+            ],
+            "control_net": [
+                "19",
+                0
+            ],
+            "image": [
+                "60",
+                0
+            ],
+            "vae": [
+                "14",
+                2
+            ]
+        },
+        "class_type": "ControlNetApplyAdvanced",
+        "_meta": {
+            "title": "Apply ControlNet"
+        }
+    },
+    "14": {
+        "inputs": {
+            "ckpt_name": "epicrealism_naturalSinRC1VAE.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+            "title": "Load Checkpoint"
+        }
+    },
+    "15": {
+        "inputs": {
+            "seed": 654689829781574,
+            "steps": 20,
+            "cfg": 8,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1,
+            "model": [
+                "14",
+                0
+            ],
+            "positive": [
+                "13",
+                0
+            ],
+            "negative": [
+                "13",
+                1
+            ],
+            "latent_image": [
+                "17",
+                0
+            ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+            "title": "KSampler"
+        }
+    },
+    "16": {
+        "inputs": {
+            "text": "text, watermark",
+            "clip": [
+                "14",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "17": {
+        "inputs": {
+            "samples": [
+                "18",
+                0
+            ],
+            "mask": [
+                "22",
+                0
+            ]
+        },
+        "class_type": "SetLatentNoiseMask",
+        "_meta": {
+            "title": "Set Latent Noise Mask"
+        }
+    },
+    "18": {
+        "inputs": {
+            "pixels": [
+                "27",
+                0
+            ],
+            "vae": [
+                "14",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "19": {
+        "inputs": {
+            "control_net_name": "control_v11p_sd15_openpose.pth"
+        },
+        "class_type": "ControlNetLoader",
+        "_meta": {
+            "title": "Load ControlNet Model"
+        }
+    },
+    "21": {
+        "inputs": {
+            "samples": [
+                "15",
+                0
+            ],
+            "vae": [
+                "14",
+                2
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "22": {
+        "inputs": {
+            "mask": [
+                "48",
+                1
+            ]
+        },
+        "class_type": "InvertMask (segment anything)",
+        "_meta": {
+            "title": "InvertMask (segment anything)"
+        }
+    },
+    "23": {
+        "inputs": {
+            "images": [
+                "21",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "24": {
+        "inputs": {
+            "images": [
+                "58",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "25": {
+        "inputs": {
+            "text": [
+                "26",
+                0
+            ],
+            "clip": [
+                "14",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "26": {
+        "inputs": {
+            "text": "british young man, wearing black shirt and grey pants, london street background"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+            "title": "Positive Prompt"
+        }
+    },
+    "27": {
+        "inputs": {
+            "width": 1024,
+            "height": 1024,
+            "interpolation": "nearest",
+            "method": "keep proportion",
+            "condition": "always",
+            "multiple_of": 0,
+            "image": [
+                "59",
+                0
+            ]
+        },
+        "class_type": "ImageResize+",
+        "_meta": {
+            "title": "🔧 Image Resize"
+        }
+    },
+    "28": {
+        "inputs": {
+            "ckpt_name": "epicrealism_naturalSinRC1VAE.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+            "title": "Load Checkpoint"
+        }
+    },
+    "29": {
+        "inputs": {
+            "pixels": [
+                "58",
+                0
+            ],
+            "vae": [
+                "28",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "30": {
+        "inputs": {
+            "text": [
+                "26",
+                0
+            ],
+            "clip": [
+                "28",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "31": {
+        "inputs": {
+            "text": "",
+            "clip": [
+                "28",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "32": {
+        "inputs": {
+            "multiplier": 0.18,
+            "positive": [
+                "30",
+                0
+            ],
+            "negative": [
+                "31",
+                0
+            ],
+            "vae": [
+                "28",
+                2
+            ],
+            "foreground": [
+                "29",
+                0
+            ]
+        },
+        "class_type": "ICLightConditioning",
+        "_meta": {
+            "title": "IC-Light Conditioning"
+        }
+    },
+    "33": {
+        "inputs": {
+            "model_path": "IC-Light/iclight_sd15_fc.safetensors",
+            "model": [
+                "28",
+                0
+            ]
+        },
+        "class_type": "LoadAndApplyICLightUnet",
+        "_meta": {
+            "title": "Load And Apply IC-Light"
+        }
+    },
+    "34": {
+        "inputs": {
+            "blur_radius": 30,
+            "sigma": 1,
+            "image": [
+                "37",
+                0
+            ]
+        },
+        "class_type": "ImageBlur",
+        "_meta": {
+            "title": "Image Blur"
+        }
+    },
+    "35": {
+        "inputs": {
+            "brightness": 1.2,
+            "contrast": 1,
+            "saturation": 1,
+            "image": [
+                "34",
+                0
+            ]
+        },
+        "class_type": "LayerColor: Brightness & Contrast",
+        "_meta": {
+            "title": "LayerColor: Brightness & Contrast"
+        }
+    },
+    "36": {
+        "inputs": {
+            "pixels": [
+                "35",
+                0
+            ],
+            "vae": [
+                "28",
+                2
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "37": {
+        "inputs": {
+            "channel": "red",
+            "image": [
+                "27",
+                0
+            ]
+        },
+        "class_type": "Image Select Channel",
+        "_meta": {
+            "title": "Image Select Channel"
+        }
+    },
+    "38": {
+        "inputs": {
+            "images": [
+                "41",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "39": {
+        "inputs": {
+            "images": [
+                "35",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "40": {
+        "inputs": {
+            "seed": 786506531041769,
+            "steps": 40,
+            "cfg": 2,
+            "sampler_name": "dpmpp_2m_sde",
+            "scheduler": "karras",
+            "denoise": 1,
+            "model": [
+                "33",
+                0
+            ],
+            "positive": [
+                "32",
+                0
+            ],
+            "negative": [
+                "32",
+                1
+            ],
+            "latent_image": [
+                "36",
+                0
+            ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+            "title": "KSampler"
+        }
+    },
+    "41": {
+        "inputs": {
+            "samples": [
+                "40",
+                0
+            ],
+            "vae": [
+                "28",
+                2
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "42": {
+        "inputs": {
+            "images": [
+                "45",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "43": {
+        "inputs": {
+            "images": [
+                "44",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "44": {
+        "inputs": {
+            "mode": "Luminosity",
+            "blend_image": [
+                "41",
+                0
+            ],
+            "base_image": [
+                "58",
+                0
+            ]
+        },
+        "class_type": "Color Blend",
+        "_meta": {
+            "title": "Color Blend"
+        }
+    },
+    "45": {
+        "inputs": {
+            "blend_percentage": 0.2,
+            "image_a": [
+                "44",
+                0
+            ],
+            "image_b": [
+                "41",
+                0
+            ]
+        },
+        "class_type": "Image Blend",
+        "_meta": {
+            "title": "Image Blend"
+        }
+    },
+    "46": {
+        "inputs": {
+            "images": [
+                "55",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "47": {
+        "inputs": {
+            "images": [
+                "48",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "48": {
+        "inputs": {
+            "prompt": "clothes",
+            "threshold": 0.3,
+            "sam_model": [
+                "10",
+                0
+            ],
+            "grounding_dino_model": [
+                "11",
+                0
+            ],
+            "image": [
+                "27",
+                0
+            ]
+        },
+        "class_type": "GroundingDinoSAMSegment (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoSAMSegment (segment anything)"
+        }
+    },
+    "49": {
+        "inputs": {
+            "opacity": 80,
+            "image": [
+                "51",
+                0
+            ],
+            "color_ref_image": [
+                "58",
+                0
+            ]
+        },
+        "class_type": "LayerColor: ColorAdapter",
+        "_meta": {
+            "title": "LayerColor: ColorAdapter"
+        }
+    },
+    "50": {
+        "inputs": {
+            "images": [
+                "49",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "51": {
+        "inputs": {
+            "mode": "add",
+            "blur_type": "blur",
+            "blur_size": 5,
+            "factor": 1,
+            "images": [
+                "55",
+                0
+            ],
+            "detail": [
+                "53",
+                0
+            ]
+        },
+        "class_type": "RestoreDetail",
+        "_meta": {
+            "title": "Restore Detail"
+        }
+    },
+    "52": {
+        "inputs": {
+            "images": [
+                "51",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "53": {
+        "inputs": {
+            "mode": "soft_light",
+            "blur_sigma": 5,
+            "blend_factor": 1,
+            "target": [
+                "55",
+                0
+            ],
+            "source": [
+                "58",
+                0
+            ],
+            "mask": [
+                "48",
+                1
+            ]
+        },
+        "class_type": "DetailTransfer",
+        "_meta": {
+            "title": "Detail Transfer"
+        }
+    },
+    "54": {
+        "inputs": {
+            "images": [
+                "53",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "55": {
+        "inputs": {
+            "strength": 100,
+            "brightness": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "red": 0,
+            "green": 0,
+            "blue": 0,
+            "mode": "RGB",
+            "image": [
+                "45",
+                0
+            ]
+        },
+        "class_type": "LayerColor: AutoAdjustV2",
+        "_meta": {
+            "title": "LayerColor: AutoAdjust V2"
+        }
+    },
+    "56": {
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "57",
+                0
+            ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+            "title": "Save Image"
+        }
+    },
+    "57": {
+        "inputs": {
+            "blend_percentage": 0.2,
+            "image_a": [
+                "49",
+                0
+            ],
+            "image_b": [
+                "53",
+                0
+            ]
+        },
+        "class_type": "Image Blend",
+        "_meta": {
+            "title": "Image Blend"
+        }
+    },
+    "58": {
+        "inputs": {
+            "x": 0,
+            "y": 0,
+            "resize_source": true,
+            "destination": [
+                "21",
+                0
+            ],
+            "source": [
+                "27",
+                0
+            ],
+            "mask": [
+                "48",
+                1
+            ]
+        },
+        "class_type": "ImageCompositeMasked",
+        "_meta": {
+            "title": "ImageCompositeMasked"
+        }
+    },
+    "59": {
+        "inputs": {
+            "image": "WhatsApp Image 2024-03-09 at 16.35.31.jpeg",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "60": {
+        "inputs": {
+            "detect_hand": "enable",
+            "detect_body": "enable",
+            "detect_face": "enable",
+            "resolution": 512,
+            "bbox_detector": "yolox_l.onnx",
+            "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+            "scale_stick_for_xinsr_cn": "disable",
+            "image": [
+                "27",
+                0
+            ]
+        },
+        "class_type": "DWPreprocessor",
+        "_meta": {
+            "title": "DWPose Estimator"
+        }
+    }
+}
