@@ -215,23 +215,13 @@
             "condition": "always",
             "multiple_of": 0,
             "image": [
-                "25",
+                "65",
                 0
             ]
         },
         "class_type": "ImageResize+",
         "_meta": {
             "title": "🔧 Image Resize"
-        }
-    },
-    "25": {
-        "inputs": {
-            "image": "delsey-chatelet-air-2.0-00167681015-01_1800x1800.webp",
-            "upload": "image"
-        },
-        "class_type": "LoadImage",
-        "_meta": {
-            "title": "Load Image"
         }
     },
     "26": {
@@ -542,7 +532,10 @@
     },
     "47": {
         "inputs": {
-            "text": "luggage, kept in forest, trees background"
+            "text": [
+                "66",
+                0
+            ]
         },
         "class_type": "Text Multiline",
         "_meta": {
@@ -763,6 +756,44 @@
         "class_type": "SaveImage",
         "_meta": {
             "title": "Save Image"
+        }
+    },
+    "64": {
+        "inputs": {
+            "filename_prefix": "FlowScale",
+            "format": "png",
+            "label": "Output Image",
+            "quality": 95,
+            "lossless": false,
+            "images": [
+                "58",
+                0
+            ]
+        },
+        "class_type": "FSSaveImage",
+        "_meta": {
+            "title": "[FS]⚡Save Image (Output)"
+        }
+    },
+    "65": {
+        "inputs": {
+            "image": "example.png",
+            "upload": "image",
+            "label": "Input Product Image"
+        },
+        "class_type": "FSLoadImage",
+        "_meta": {
+            "title": "[FS]⚡Load Image (Input)"
+        }
+    },
+    "66": {
+        "inputs": {
+            "default_value": "",
+            "label": "Background Prompt"
+        },
+        "class_type": "FSLoadText",
+        "_meta": {
+            "title": "[FS]⚡Load Text (Input)"
         }
     }
 }
