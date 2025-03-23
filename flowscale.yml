@@ -63,7 +63,7 @@ workflows:
   - id: yb9cayzg3pd
     name: product_photography_improved_api.json
     file: inpainting_and_outpainting/product_photography_improved_api.json
-    version: 9
+    version: 10
     description: ''
     inputs:
       - path: 64.inputs.filename_prefix
@@ -74,7 +74,7 @@ workflows:
         category: output
         randomize: true
       - path: 65.inputs.image
-        label: Input Product Image
+        label: Upload Product Image
         parameter_name: image_22068
         type: string
         demo_type: image
@@ -204,7 +204,7 @@ normal_workflows:
   - id: qgdifbpgqnq
     name: product_photography_improved.json
     file: inpainting_and_outpainting/product_photography_improved.json
-    version: 9
+    version: 10
   - id: tz7od90a4r
     name: image_composite_masking.json
     file: basics/image_composite_masking.json
