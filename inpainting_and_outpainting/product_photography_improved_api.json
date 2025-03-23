@@ -779,7 +779,7 @@
         "inputs": {
             "image": "example.png",
             "upload": "image",
-            "label": "Input Product Image"
+            "label": "Upload Product Image"
         },
         "class_type": "FSLoadImage",
         "_meta": {
